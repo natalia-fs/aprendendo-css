@@ -1,0 +1,258 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.background {
+  background: #9069cd;
+  width: 250px;
+  height: 250px;
+  border-radius: 20%;
+}
+
+.background .hair {
+  background: #353535;
+  width: 130px;
+  height: 186px;
+  position: relative;
+  top: -20px;
+  left: -15px;
+  border-radius: 40px 45px 30px 30px;
+  -webkit-transform: rotateZ(-5deg);
+          transform: rotateZ(-5deg);
+}
+
+.background .hair::before {
+  content: "";
+  position: absolute;
+  width: 122px;
+  height: 156px;
+  background: #353535;
+  border-radius: 30px;
+  top: 30px;
+  left: 40px;
+  z-index: -2;
+}
+
+.background .hair::after {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 60px;
+  background: #353535;
+  border-radius: 30px;
+  top: 20px;
+  left: 29px;
+}
+
+.background .hair .face {
+  width: 106px;
+  height: 105px;
+  background: #a56644;
+  border-radius: 25px;
+  position: relative;
+  top: 45px;
+  left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.background .hair .face::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  background: #a56644;
+  top: 55px;
+  left: 11px;
+  z-index: 1;
+  -webkit-transform: rotateZ(23deg);
+          transform: rotateZ(23deg);
+}
+
+.background .hair .face::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background: #ffb100;
+  border-radius: 20px 96px 0px 0px;
+  top: -8px;
+  left: 3px;
+  -webkit-transform: scaleY(0.55);
+          transform: scaleY(0.55);
+}
+
+.background .hair .face .eyes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.background .hair .face .eye-1 {
+  background: white;
+  width: 26px;
+  height: 36px;
+  border-radius: 13px;
+  top: -5px;
+  margin: 3px;
+  position: relative;
+}
+
+.background .hair .face .eye-1::before {
+  content: "";
+  width: 12px;
+  height: 20px;
+  background: #353535;
+  z-index: 3;
+  top: 8px;
+  margin-left: 10px;
+  border-radius: 6px;
+  position: absolute;
+}
+
+.background .hair .face .eye-1::after {
+  content: "";
+  width: 8px;
+  height: 10px;
+  background: white;
+  z-index: 3;
+  top: 4px;
+  left: 4px;
+  margin-left: 4px;
+  border-radius: 6px;
+  position: absolute;
+  -webkit-transform: rotateZ(15deg);
+          transform: rotateZ(15deg);
+}
+
+.background .hair .face .eye-2 {
+  background: white;
+  width: 26px;
+  height: 36px;
+  border-radius: 13px;
+  top: -5px;
+  margin: 3px;
+  position: relative;
+}
+
+.background .hair .face .eye-2::before {
+  content: "";
+  width: 12px;
+  height: 20px;
+  background: #353535;
+  z-index: 3;
+  top: 8px;
+  margin-left: 4px;
+  border-radius: 6px;
+  position: absolute;
+}
+
+.background .hair .face .eye-2::after {
+  content: "";
+  width: 8px;
+  height: 10px;
+  background: white;
+  z-index: 3;
+  top: 4px;
+  left: -2px;
+  margin-left: 4px;
+  border-radius: 6px;
+  position: absolute;
+  -webkit-transform: rotateZ(15deg);
+          transform: rotateZ(15deg);
+}
+
+.background .hair .face .aux {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #87401a;
+  position: absolute;
+  top: 55px;
+}
+
+.background .hair .face .aux .nose {
+  width: 16px;
+  height: 10px;
+  background: #87401a;
+  border-radius: 10px;
+  position: absolute;
+  top: 6px;
+  left: -8px;
+  z-index: 2;
+}
+
+.background .hair .face .mouth {
+  width: 36px;
+  height: 20px;
+  background-color: #881b1b;
+  border-radius: 0px 25px 25px 50px;
+  position: absolute;
+  top: 74px;
+  margin-top: 1px;
+  margin-right: 8px;
+  z-index: 3;
+}
+
+.background .hair .face .mouth::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #881b1b;
+  border-radius: 50px 20px 25px 100px;
+  position: absolute;
+  -webkit-transform: rotateZ(30deg);
+          transform: rotateZ(30deg);
+  top: -5px;
+  left: -2px;
+}
+
+.background .hair .face .mouth .tongue {
+  background: #ff4b4b;
+  width: 25px;
+  height: 14px;
+  z-index: 4;
+  position: absolute;
+  top: 6px;
+  border-radius: 10% 90%;
+  overflow: hidden;
+}
+/*# sourceMappingURL=style.css.map */
