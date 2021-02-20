@@ -8,9 +8,16 @@
 
 body{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #c0e7f9;
   height: 100vh;
+}
+
+h1{
+  margin-bottom: 30px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .background{
