@@ -1,0 +1,209 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.background {
+  background: #58cc02;
+  width: 400px;
+  height: 400px;
+  border-radius: 15%;
+  position: relative;
+}
+
+.background::before {
+  content: "";
+  width: inherit;
+  height: 54px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #a56644;
+  border-radius: 0 0 53px 53px;
+}
+
+.background::after {
+  content: "";
+  width: 300px;
+  height: 21px;
+  background: #945837;
+  position: absolute;
+  bottom: 32px;
+  left: calc(50% - 140px);
+  border-radius: 12px;
+}
+
+.background .glass {
+  position: absolute;
+  width: 260px;
+  height: 250px;
+  background-color: #EAEAEA;
+  bottom: 54px;
+  left: calc(50% - 120px);
+  border-radius: 0 0 40px 40px;
+}
+
+.background .glass::before {
+  content: "";
+  width: 110px;
+  height: 160px;
+  position: absolute;
+  top: calc(50% - 86px);
+  left: -20%;
+  border: 29px solid #EAEAEA;
+  border-radius: 50px;
+}
+
+.background .glass .inside-bubbles {
+  opacity: .13;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  background: white;
+  z-index: 1;
+  top: 60%;
+  left: 20%;
+}
+
+.background .glass .inside-bubbles::after {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  top: -48%;
+  left: 120%;
+}
+
+.background .glass .liquid {
+  background: #ff9600;
+  width: 220px;
+  height: 215px;
+  position: relative;
+  left: calc(50% - 110px);
+  border-radius: 0 0 40px 40px;
+}
+
+.background .glass .liquid::before {
+  content: "";
+  width: 36px;
+  height: 154px;
+  position: absolute;
+  background: white;
+  opacity: .2;
+  z-index: 2;
+  top: 20px;
+  right: 28px;
+  border-radius: 0 0 20px 20px;
+}
+
+.background .glass .liquid::after {
+  content: "";
+  width: inherit;
+  height: 70px;
+  position: absolute;
+  background: #ffba5c;
+}
+
+.background .glass .overflow {
+  width: 290px;
+  height: 90px;
+  background: #ffe1ba;
+  position: absolute;
+  top: -70px;
+  left: calc(50% - 155px + 3.5%);
+  border-radius: 140px;
+  z-index: 1;
+}
+
+.background .glass .overflow::before {
+  content: "";
+  width: 180px;
+  height: 60px;
+  position: absolute;
+  background: #ffe1ba;
+  border-radius: 30px;
+  left: 15%;
+  top: -43px;
+}
+
+.background .glass .overflow .details {
+  width: 80px;
+  height: 100px;
+  position: relative;
+}
+
+.background .glass .overflow .details::before {
+  content: "";
+  width: 52px;
+  height: 100px;
+  background: #ffe1ba;
+  top: 60%;
+  left: 100%;
+  position: absolute;
+  border-radius: 0 0 26px 26px;
+}
+
+.background .glass .overflow .details::after {
+  content: "";
+  width: 28px;
+  height: 60px;
+  background: #ffe1ba;
+  top: 64%;
+  left: 70%;
+  position: absolute;
+  border-radius: 0 0 14px 14px;
+}
+
+.background .glass .bubbles {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: #ffe1ba;
+  position: relative;
+  bottom: 80%;
+  left: 106%;
+}
+
+.background .glass .bubbles::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  background: #ffe1ba;
+  position: absolute;
+  border-radius: 50%;
+  top: -130px;
+  left: -320px;
+}
+
+.background .glass .bubbles::after {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background: #ffe1ba;
+  position: absolute;
+  border-radius: 50%;
+  top: 74px;
+  left: -2px;
+}
+/*# sourceMappingURL=style.css.map */
