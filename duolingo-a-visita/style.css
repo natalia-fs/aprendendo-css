@@ -17,5 +17,144 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100vh;
+}
+
+.background {
+  background: #1cb0f6;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.background::before {
+  content: "";
+  width: 430px;
+  height: 430px;
+  background: white;
+  border-radius: 50%;
+  z-index: -1;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+}
+
+.background::after {
+  content: "";
+  width: 460px;
+  height: 460px;
+  background: lightgray;
+  border-radius: 50%;
+  z-index: -2;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+
+.background .hair {
+  background: #363636;
+  width: 280px;
+  height: 100px;
+  border-radius: 50px;
+  position: relative;
+  top: 56%;
+  left: calc(50% - 140px);
+}
+
+.background .hair::before {
+  content: "";
+  width: 222px;
+  height: 240px;
+  border-radius: 50%;
+  background: #363636;
+  position: absolute;
+  top: -162%;
+  left: 11%;
+}
+
+.background .hair::after {
+  content: "";
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #363636;
+  position: absolute;
+  top: -170%;
+  left: 0;
+}
+
+.background .hair .face {
+  width: 200px;
+  height: 240px;
+  background: #a56644;
+  border-radius: 100px;
+  position: relative;
+  top: -150%;
+  left: calc(50% - 100px);
+}
+
+.background .hair .face::before {
+  content: "";
+  width: 50px;
+  height: 66px;
+  border-radius: 50%;
+  background: #a56644;
+  position: absolute;
+  top: 38%;
+  left: -12%;
+}
+
+.background .hair .face::after {
+  content: "";
+  width: 50px;
+  height: 66px;
+  border-radius: 50%;
+  background: #a56644;
+  position: absolute;
+  top: 38%;
+  right: -12%;
+}
+
+.background .hair .face .eyes {
+  width: 150px;
+  height: 40px;
+  position: relative;
+  left: 12.5%;
+}
+
+.background .hair .face .eyes::before {
+  content: "";
+  width: 15px;
+  height: 40px;
+  background: #7b482d;
+  position: absolute;
+  top: 180%;
+  left: 30%;
+  border-radius: 7px;
+}
+
+.background .hair .face .eyes::after {
+  content: "";
+  width: 15px;
+  height: 40px;
+  background: #7b482d;
+  position: absolute;
+  top: 180%;
+  right: 30%;
+  border-radius: 7px;
+}
+
+.background .hair .face .mouth {
+  width: 50px;
+  height: 25px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border: 10px solid #7b482d;
+  border-top: 0;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 25px);
+  margin-top: 6px;
 }
 /*# sourceMappingURL=style.css.map */
