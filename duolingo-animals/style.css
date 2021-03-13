@@ -177,4 +177,126 @@ body {
   -webkit-transform: rotate(-12deg);
           transform: rotate(-12deg);
 }
+
+.background .monkey {
+  -webkit-transform: rotateZ(-8deg);
+          transform: rotateZ(-8deg);
+  position: relative;
+  top: 72%;
+}
+
+.background .monkey .head {
+  width: 90px;
+  height: 90px;
+  background: #9f664a;
+  border-radius: 50%;
+  position: absolute;
+  left: 47%;
+}
+
+.background .monkey .head .face {
+  width: 36px;
+  height: 72px;
+  background: #fccb8c;
+  border-radius: 18px;
+  position: absolute;
+  top: 23%;
+  left: calc(50% - 18px);
+}
+
+.background .monkey .head .face::before {
+  content: "";
+  width: 65px;
+  height: 36px;
+  background: #fccb8c;
+  position: absolute;
+  border-radius: 18px;
+  left: calc(50% - 32.5px);
+}
+
+.background .monkey .head .face .eyes {
+  width: 48px;
+  height: 18px;
+  position: absolute;
+  top: 18%;
+  left: calc(50% - 24px);
+}
+
+.background .monkey .head .face .eyes::before {
+  content: "";
+  background: #4b4b4b;
+  width: 12px;
+  height: 16px;
+  position: absolute;
+  border-radius: 6px;
+  left: 16%;
+}
+
+.background .monkey .head .face .eyes::after {
+  content: "";
+  background: #4b4b4b;
+  width: 12px;
+  height: 16px;
+  position: absolute;
+  border-radius: 6px;
+  right: 16%;
+}
+
+.background .monkey .head .face .ears {
+  width: 68px;
+  height: 50px;
+  position: absolute;
+  z-index: -2;
+  left: -45%;
+}
+
+.background .monkey .head .face .ears::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 18%;
+  left: -38%;
+  background: #fccb8c;
+  border-radius: 50%;
+}
+
+.background .monkey .head .face .ears::after {
+  content: "";
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 18%;
+  right: -38%;
+  background: #fccb8c;
+  border-radius: 50%;
+}
+
+.background .monkey .head .face .nose {
+  width: 20px;
+  height: 16px;
+  position: absolute;
+  border-radius: 50%;
+  top: 30%;
+  left: calc(50% - 10px);
+  border: 10px solid #9f664a;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(135deg) scale(0.7);
+          transform: rotate(135deg) scale(0.7);
+}
+
+.background .monkey .head .face .mouth {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  top: 45%;
+  left: calc(50% - 10px);
+  border: 4px solid #dead7e;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
 /*# sourceMappingURL=style.css.map */
