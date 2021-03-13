@@ -1,0 +1,180 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.background {
+  background: #9069cd;
+  width: 400px;
+  height: 400px;
+  border-radius: 15%;
+  position: relative;
+}
+
+.background .elephant .face {
+  width: 110px;
+  height: 96px;
+  background: #d8d8d8;
+  border-radius: 10px 10px 30px 30px;
+  position: absolute;
+  top: 55%;
+  left: 65%;
+}
+
+.background .elephant .face::before {
+  content: "";
+  width: 62px;
+  height: 116px;
+  background-color: #d8d8d8;
+  position: absolute;
+  border-radius: 30px 0 0 30px;
+  -webkit-transform: skew(-4deg);
+          transform: skew(-4deg);
+  top: -21%;
+  left: -3%;
+}
+
+.background .elephant .face::after {
+  content: "";
+  width: 60px;
+  height: 116px;
+  background-color: #d8d8d8;
+  position: absolute;
+  border-radius: 0px 30px 30px 0px;
+  -webkit-transform: skew(4deg);
+          transform: skew(4deg);
+  top: -21%;
+  right: -3%;
+}
+
+.background .elephant .face .eyes {
+  width: 32px;
+  height: 15px;
+  position: absolute;
+  top: 10%;
+  left: calc(50% - 16px);
+  z-index: 2;
+}
+
+.background .elephant .face .eyes::before {
+  content: "";
+  background-color: #4b4b4b;
+  position: absolute;
+  width: 9px;
+  height: 16px;
+  border-radius: 4.5px;
+  left: 4px;
+}
+
+.background .elephant .face .eyes::after {
+  content: "";
+  background-color: #4b4b4b;
+  position: absolute;
+  width: 9px;
+  height: 16px;
+  border-radius: 4.5px;
+  right: 4px;
+}
+
+.background .elephant .face .trunk {
+  width: 28px;
+  height: 120px;
+  background-color: #c7c7c7;
+  border-radius: 14px;
+  position: absolute;
+  top: 31%;
+  left: 37.5%;
+  z-index: 1;
+}
+
+.background .elephant .face .trunk::before {
+  content: "";
+  position: absolute;
+  background-color: #c7c7c7;
+  width: 48px;
+  height: 28px;
+  top: calc(100% - 28px);
+  border-radius: 14px;
+}
+
+.background .elephant .face .trunk .tusks {
+  width: 56px;
+  height: 48px;
+  position: relative;
+  left: calc(50% - 28px);
+}
+
+.background .elephant .face .trunk .tusks::before {
+  content: "";
+  background-color: white;
+  width: 14px;
+  height: 48px;
+  position: absolute;
+  border-radius: 7px;
+  top: -10%;
+  left: 0;
+}
+
+.background .elephant .face .trunk .tusks::after {
+  content: "";
+  background-color: white;
+  width: 14px;
+  height: 48px;
+  position: absolute;
+  border-radius: 7px;
+  top: -10%;
+  right: 0;
+}
+
+.background .elephant .ears {
+  width: 200px;
+  height: 90px;
+  position: absolute;
+  z-index: 0;
+  top: 55%;
+  left: 54%;
+}
+
+.background .elephant .ears::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background-color: #c7c7c7;
+  top: 0;
+  left: 8%;
+  border-radius: 24px;
+  -webkit-transform: rotate(12deg);
+          transform: rotate(12deg);
+}
+
+.background .elephant .ears::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background-color: #c7c7c7;
+  top: 0;
+  right: 8%;
+  border-radius: 24px;
+  -webkit-transform: rotate(-12deg);
+          transform: rotate(-12deg);
+}
+/*# sourceMappingURL=style.css.map */
