@@ -167,6 +167,121 @@ body {
       
     }
   }
+
+  .monkey{
+    transform: rotateZ(-8deg);
+    position: relative;
+    top: 72%;
+    .head{
+      width: 90px;
+      height: 90px;
+      background: #9f664a;
+      border-radius: 50%;
+      position: absolute;
+      left: 47%;
+
+      .face{
+        width: 36px;
+        height: 72px;
+        background: #fccb8c;
+        border-radius: 18px;
+        position: absolute;
+        top: 23%;
+        left: calc(50% - 18px);
+
+        &::before{
+          content: "";
+          width: 65px;
+          height: 36px;
+          background: #fccb8c;
+          position: absolute;
+          border-radius: 18px;
+          left: calc(50% - 32.5px);
+        }
+
+        .eyes{
+          width: 48px;
+          height: 18px;
+          position: absolute;
+          top: 18%;
+          left: calc(50% - 24px);
+
+          &::before{
+            content: "";
+            background: #4b4b4b;
+            width: 12px;
+            height: 16px;
+            position: absolute;
+            border-radius: 6px;
+            left: 16%;
+          }
+          &::after{
+            content: "";
+            background: #4b4b4b;
+            width: 12px;
+            height: 16px;
+            position: absolute;
+            border-radius: 6px;
+            right: 16%;
+          }
+        }
+
+        .ears{
+          width: 68px;
+          height: 50px;
+          position: absolute;
+          z-index: -2;
+          left: -45%;
+          &::before{
+            content: "";
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 18%;
+            left: -38%;
+            background: #fccb8c;
+            border-radius: 50%;
+          }
+          &::after{
+            content: "";
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            top: 18%;
+            right: -38%;
+            background: #fccb8c;
+            border-radius: 50%;
+          }
+        }
+
+        .nose{
+          width: 20px;
+          height: 16px;
+          position: absolute;
+          border-radius: 50%;
+          top: 30%;
+          left: calc(50% - 10px);
+          border: 10px solid #9f664a;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+          transform: rotate(135deg) scale(.7);
+        }
+        .mouth{
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          border-radius: 50%;
+          top: 45%;
+          left: calc(50% - 10px);
+          border: 4px solid #dead7e;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+          transform: rotate(135deg);
+        }
+      }
+    }
+  }
 }
-// #c7c7c7
+
+// #fccb8c
 // #4b4b4b
