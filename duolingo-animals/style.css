@@ -22,8 +22,8 @@ body {
 
 .background {
   background: #9069cd;
-  width: 400px;
-  height: 400px;
+  width: 360px;
+  height: 360px;
   border-radius: 15%;
   position: relative;
 }
@@ -78,8 +78,8 @@ body {
   background-color: #4b4b4b;
   position: absolute;
   width: 9px;
-  height: 16px;
-  border-radius: 4.5px;
+  height: 14px;
+  border-radius: 5px;
   left: 4px;
 }
 
@@ -88,8 +88,8 @@ body {
   background-color: #4b4b4b;
   position: absolute;
   width: 9px;
-  height: 16px;
-  border-radius: 4.5px;
+  height: 14px;
+  border-radius: 5px;
   right: 4px;
 }
 
@@ -148,8 +148,8 @@ body {
   height: 90px;
   position: absolute;
   z-index: 0;
-  top: 55%;
-  left: 54%;
+  top: 56%;
+  left: 52%;
 }
 
 .background .elephant .ears::before {
@@ -182,7 +182,8 @@ body {
   -webkit-transform: rotateZ(-8deg);
           transform: rotateZ(-8deg);
   position: relative;
-  top: 72%;
+  top: 74%;
+  left: -3%;
 }
 
 .background .monkey .head {
@@ -298,5 +299,274 @@ body {
   border-left-color: transparent;
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
+}
+
+.background .boy {
+  position: relative;
+  top: 8%;
+  left: 3%;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.background .boy .head {
+  width: 200px;
+  height: 160px;
+  background: #ffc6b7;
+  border-radius: 35px;
+  position: relative;
+}
+
+.background .boy .head::before {
+  content: "";
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  background: #ffc6b7;
+  border-radius: 50%;
+  top: calc(50% - 17px);
+  left: -11%;
+  z-index: 1;
+}
+
+.background .boy .head::after {
+  content: "";
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  background: #ffc6b7;
+  border-radius: 50%;
+  top: calc(50% - 17px);
+  right: -11%;
+}
+
+.background .boy .head .tuft {
+  background: #ff9600;
+  width: 70px;
+  height: 30px;
+  border-radius: 35px 35px 0 0;
+  position: absolute;
+  top: -30px;
+  left: calc(50% - 30px);
+}
+
+.background .boy .head .tuft::before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -40px;
+  left: -35px;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.background .boy .head .hair {
+  width: 200px;
+  height: 75px;
+  position: absolute;
+}
+
+.background .boy .head .hair::before {
+  content: "";
+  width: 30px;
+  height: 70px;
+  background: #ff9600;
+  border-radius: 35px 0 30px 0;
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  opacity: .4;
+}
+
+.background .boy .head .hair::after {
+  content: "";
+  width: 30px;
+  height: 70px;
+  background: #ff9600;
+  border-radius: 0 35px 0 30px;
+  position: absolute;
+  top: 1px;
+  right: 0px;
+  opacity: .35;
+}
+
+.background .boy .head .face {
+  width: 200px;
+  height: 160px;
+  top: 2%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.background .boy .head .face::after {
+  content: "";
+  width: 38px;
+  height: 14px;
+  background: #ffc6b7;
+  z-index: 2;
+  position: absolute;
+  top: 55%;
+  left: 38.5%;
+  border-radius: 60%;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  z-index: 3;
+}
+
+.background .boy .head .face .eyes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.background .boy .head .face .eyes::before {
+  content: "";
+  width: 40px;
+  height: 10px;
+  background: #ffc6b7;
+  z-index: 2;
+  position: absolute;
+  top: 72px;
+  left: 25%;
+  border-radius: 50%;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.background .boy .head .face .eyes .eye-1 {
+  background: white;
+  width: 44px;
+  height: 60px;
+  position: absolute;
+  top: 12%;
+  left: calc(50% - 44px - 4px);
+  border-radius: 22px;
+  padding-left: 2px;
+}
+
+.background .boy .head .face .eyes .eye-1 .inner-1 {
+  width: 20px;
+  height: 32px;
+  background: #3d3d3d;
+  z-index: 3;
+  top: calc(50% - 15px);
+  right: 4px;
+  margin-left: 10px;
+  border-radius: 10px;
+  position: relative;
+  -webkit-transition: .2 ease;
+  transition: .2 ease;
+}
+
+.background .boy .head .face .eyes .eye-1 .inner-1::after {
+  content: "";
+  width: 8px;
+  height: 12px;
+  background: white;
+  z-index: 3;
+  top: 5%;
+  right: 16px;
+  left: 0px;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.background .boy .head .face .eyes .eye-2 {
+  background: white;
+  width: 44px;
+  height: 60px;
+  position: absolute;
+  top: 12%;
+  left: calc(50% + 4px);
+  border-radius: 22px;
+  padding-left: 2px;
+}
+
+.background .boy .head .face .eyes .eye-2 .inner-2 {
+  content: "";
+  width: 20px;
+  height: 32px;
+  background: #3d3d3d;
+  z-index: 3;
+  top: calc(50% - 15px);
+  left: -4px;
+  margin-left: 10px;
+  border-radius: 10px;
+  position: relative;
+  -webkit-transition: .2 ease;
+  transition: .2 ease;
+}
+
+.background .boy .head .face .eyes .eye-2 .inner-2::after {
+  content: "";
+  width: 8px;
+  height: 12px;
+  background: white;
+  z-index: 3;
+  top: 5%;
+  left: 0;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.background .boy .head .face .aux {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #ee9583;
+  position: absolute;
+  top: 68px;
+  left: 46%;
+}
+
+.background .boy .head .face .aux .nose {
+  width: 16px;
+  height: 16px;
+  background: #ee9583;
+  border-radius: 8px;
+  position: absolute;
+  top: 8px;
+  left: -8px;
+  z-index: 4;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.background .boy .head .face .mouth {
+  width: 48px;
+  height: 42px;
+  background: #cc4c4c;
+  border-radius: 10% 10% 24px 24px;
+  position: relative;
+  top: 60%;
+  left: calc(50% - 32px);
+  overflow: hidden;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.background .boy .head .face .mouth::before {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 32px;
+  background: #fe6161;
+  top: 50%;
+  left: -20%;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */
