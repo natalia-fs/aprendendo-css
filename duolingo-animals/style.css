@@ -412,6 +412,7 @@ body {
   border-radius: 60%;
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
+  z-index: 3;
 }
 
 .background .boy .head .face .eyes {
@@ -445,8 +446,7 @@ body {
   padding-left: 2px;
 }
 
-.background .boy .head .face .eyes .eye-1::before {
-  content: "";
+.background .boy .head .face .eyes .eye-1 .inner-1 {
   width: 20px;
   height: 32px;
   background: #3d3d3d;
@@ -455,18 +455,20 @@ body {
   right: 4px;
   margin-left: 10px;
   border-radius: 10px;
-  position: absolute;
+  position: relative;
+  -webkit-transition: .2 ease;
+  transition: .2 ease;
 }
 
-.background .boy .head .face .eyes .eye-1::after {
+.background .boy .head .face .eyes .eye-1 .inner-1::after {
   content: "";
   width: 8px;
   height: 12px;
   background: white;
   z-index: 3;
-  top: 25%;
+  top: 5%;
   right: 16px;
-  margin-left: 4px;
+  left: 0px;
   border-radius: 50%;
   position: absolute;
   -webkit-transform: rotate(25deg);
@@ -484,7 +486,7 @@ body {
   padding-left: 2px;
 }
 
-.background .boy .head .face .eyes .eye-2::before {
+.background .boy .head .face .eyes .eye-2 .inner-2 {
   content: "";
   width: 20px;
   height: 32px;
@@ -494,18 +496,19 @@ body {
   left: -4px;
   margin-left: 10px;
   border-radius: 10px;
-  position: absolute;
+  position: relative;
+  -webkit-transition: .2 ease;
+  transition: .2 ease;
 }
 
-.background .boy .head .face .eyes .eye-2::after {
+.background .boy .head .face .eyes .eye-2 .inner-2::after {
   content: "";
   width: 8px;
   height: 12px;
   background: white;
   z-index: 3;
-  top: 25%;
-  left: 2px;
-  margin-left: 4px;
+  top: 5%;
+  left: 0;
   border-radius: 50%;
   position: absolute;
   -webkit-transform: rotate(25deg);

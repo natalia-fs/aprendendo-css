@@ -379,6 +379,7 @@ body {
           left: 38.5%;
           border-radius: 60%;
           transform: rotate(10deg);
+          z-index: 3;
         }
         .eyes{
           display: flex;
@@ -405,8 +406,8 @@ body {
             border-radius: 22px;
             padding-left: 2px;
 
-            &::before{
-              content: "";
+            .inner-1{
+              // content: "";
               width: 20px;
               height: 32px;
               background: #3d3d3d;
@@ -415,20 +416,21 @@ body {
               right: 4px;
               margin-left: 10px;
               border-radius: 10px;
-              position: absolute;
-            }
-            &::after{
-              content: "";
-              width: 8px;
-              height: 12px;
-              background: white;
-              z-index: 3;
-              top: 25%;
-              right: 16px;
-              margin-left: 4px;
-              border-radius: 50%;
-              position: absolute;
-              transform: rotate(25deg);
+              position: relative;
+              transition: .2 ease;
+              &::after{
+                content: "";
+                width: 8px;
+                height: 12px;
+                background: white;
+                z-index: 3;
+                top: 5%;
+                right: 16px;
+                left: 0px;
+                border-radius: 50%;
+                position: absolute;
+                transform: rotate(25deg);
+              }
             }
           }
 
@@ -442,7 +444,7 @@ body {
             border-radius: 22px;
             padding-left: 2px;
 
-            &::before{
+            .inner-2{
               content: "";
               width: 20px;
               height: 32px;
@@ -452,20 +454,20 @@ body {
               left: -4px;
               margin-left: 10px;
               border-radius: 10px;
-              position: absolute;
-            }
-            &::after{
-              content: "";
-              width: 8px;
-              height: 12px;
-              background: white;
-              z-index: 3;
-              top: 25%;
-              left: 2px;
-              margin-left: 4px;
-              border-radius: 50%;
-              position: absolute;
-              transform: rotate(25deg);
+              position: relative;
+              transition: .2 ease;
+              &::after{
+                content: "";
+                width: 8px;
+                height: 12px;
+                background: white;
+                z-index: 3;
+                top: 5%;
+                left: 0;
+                border-radius: 50%;
+                position: absolute;
+                transform: rotate(25deg);
+              }
             }
           }
         }

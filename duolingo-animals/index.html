@@ -36,8 +36,12 @@
 
           <div class="face">
             <div class="eyes">
-              <div class="eye-1"></div>
-              <div class="eye-2"></div>
+              <div class="eye-1">
+                <div class="inner-1 inner"></div>
+              </div>
+              <div class="eye-2">
+                <div class="inner-2 inner"></div>
+              </div>
             </div>
             <div class="aux">
               <div class="nose"></div>
@@ -47,5 +51,34 @@
         </div>
       </div>
     </div>
+
+    <script>
+      document.querySelector('body').addEventListener('mousemove', eyeball);
+      function eyeball(){
+        const eye = document.querySelectorAll('.inner');
+        eye.forEach((eye) => {
+          let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2)
+          let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2)
+
+          let posX = event.pageX - x;
+          let posY = event.pageY - y;
+
+          if((posX/20) > -9.7 && posX < 8.5){
+            eye.style.left = (posX/20)+"px";
+          } else if(posX > 8.5){
+            eye.style.left = 8.5+"px";
+          } else if( posX < -9.7){
+            eye.style.left = -9.7+"px";
+          }
+          if((posY/20) > 2.5 && posY < 21.62){
+            eye.style.top = (posY/20)+"px";
+          } else if(posY > 21.62){
+            eye.style.top = 21.62+"px";
+          } else if( posY < 2.5){
+            eye.style.top = 2.5+"px";
+          }
+        })
+      }
+    </script>
   </body>
 </html>
