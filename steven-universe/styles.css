@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ade7ff;
+}
+
+.head {
+  width: 300px;
+  height: 360px;
+  position: relative;
+}
+
+.head .hair {
+  width: 300px;
+  height: 180px;
+  position: absolute;
+}
+
+.head .hair::after {
+  content: "";
+  position: absolute;
+  width: 44px;
+  height: 57px;
+  background: #531700;
+  border-radius: 50% 56% 43% 58% / 45% 55% 42% 52%;
+  z-index: 2;
+  top: 26%;
+  right: 21%;
+}
+
+.head .hair .hair-1 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #531700;
+  border-radius: 35px;
+  -webkit-transform: rotate(35.38deg);
+          transform: rotate(35.38deg);
+  top: 10%;
+  left: -10%;
+}
+
+.head .hair .hair-2 {
+  position: absolute;
+  width: 163px;
+  height: 144px;
+  background: #531700;
+  border-radius: 80px 150px 83px 83px;
+  -webkit-transform: rotate(4deg);
+          transform: rotate(4deg);
+  top: -38%;
+  left: -3%;
+}
+
+.head .hair .hair-3 {
+  position: absolute;
+  width: 164px;
+  height: 144px;
+  background: #531700;
+  border-radius: 60px 40% 40%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -54%;
+  left: 25%;
+}
+
+.head .hair .hair-4 {
+  position: absolute;
+  width: 124px;
+  height: 144px;
+  background: #531700;
+  border-radius: 45px;
+  top: -41%;
+  left: 48%;
+}
+
+.head .hair .hair-5 {
+  position: absolute;
+  width: 80px;
+  height: 100px;
+  background: #531700;
+  border-radius: 30px 50% 30px 30px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -5%;
+  left: 70%;
+}
+
+.head .ear {
+  background: #f8d2bf;
+  width: 32px;
+  height: 52px;
+  border-radius: 16px 50% 40% 40%;
+  position: absolute;
+  top: 19%;
+  left: 75%;
+  z-index: 2;
+}
+
+.head .face {
+  width: 190px;
+  height: 230px;
+  position: absolute;
+  background: #f8d2bf;
+  border-radius: 80px 90px 50% 50%;
+  top: -3%;
+  left: 6%;
+  -webkit-transform: rotate(-9deg);
+          transform: rotate(-9deg);
+}
+
+.head .face::before {
+  content: "";
+  background: inherit;
+  position: absolute;
+  width: 230px;
+  height: 120px;
+  border-radius: 50px 0px 135px 95px;
+  top: 50%;
+  left: -10%;
+  z-index: 2;
+}
+/*# sourceMappingURL=styles.css.map */
