@@ -7,8 +7,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden; /* Hide vertical scrollbar */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 #particles-js{
@@ -20,12 +20,10 @@ body {
   filter: drop-shadow(0.1rem 0.1rem 0.4rem rgba(255, 255, 255, 0.15));
   position: absolute;
   top: calc(50% - 12rem);
-  /* left: calc(50% - 12rem); */
   left: -24rem;
   width: 1rem;
   height: 1rem;
   animation: spin 10s ease-in-out infinite;
-  /* margin-top: 200px; */
   box-shadow:
     1rem 0rem transparent,
     2rem 0rem transparent,
