@@ -1,0 +1,69 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+a{
+    margin-top: 250px;
+    text-decoration: none;
+}
+.figma{
+    display: flex;
+}
+.left{
+    background: #f24e1e;
+    width: 120px;
+    height: 120px;
+    border-radius: 50% 0 0 50%;
+    position: relative;
+    margin-top: 50px;
+}
+
+.left::before{
+    content: "";
+    background: #a259ff;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 50% 0 0 50%;
+}
+.left::after{
+    content: "";
+    background: #0acf83;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 200%;
+    left: 0;
+    border-radius: 50% 0 50% 50%;
+}
+
+.right{
+    background: #ff7262;
+    width: 120px;
+    height: 120px;
+    border-radius: 0 50% 50% 0;
+    position: relative;
+    margin-top: 50px; 
+}
+
+.right::before{
+    content: "";
+    background: #1abcfe;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 50%;
+}
