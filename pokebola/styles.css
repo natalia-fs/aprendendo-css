@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 10px solid #252525;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .red {
+  background: #e24646;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  z-index: -2;
+}
+
+.container .white {
+  background: #f6f5f5;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  z-index: -2;
+  top: 50%;
+}
+
+.container .circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: white;
+  border: 10px solid #252525;
+  position: relative;
+  top: calc(50% - 60px);
+  margin: 0 auto;
+}
+
+.container .circle::before {
+  content: "";
+  width: 400px;
+  height: 60px;
+  background: #252525;
+  position: absolute;
+  z-index: -1;
+  top: calc(50% - 30px);
+  left: -150%;
+}
+/*# sourceMappingURL=styles.css.map */
