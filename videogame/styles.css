@@ -25,6 +25,8 @@ body {
   background: #1b1b1b;
   border-radius: 35%;
   position: relative;
+  -webkit-box-shadow: -20px 8px #0e0e0e, 0px -8px #0e0e0e;
+          box-shadow: -20px 8px #0e0e0e, 0px -8px #0e0e0e;
 }
 
 .container::before {
@@ -36,6 +38,7 @@ body {
   left: -12%;
   background: #1b1b1b;
   border-radius: 49% 51% 73% 27% / 69% 29% 71% 31%;
+  border: 10px solid #0e0e0e;
 }
 
 .container::after {
@@ -47,6 +50,7 @@ body {
   right: -12%;
   background: #1b1b1b;
   border-radius: 47% 53% 34% 66% / 20% 58% 42% 80%;
+  border: 10px solid #0e0e0e;
   z-index: -1;
 }
 

@@ -19,6 +19,7 @@ body{
   background: rgb(27,27,27);
   border-radius: 35%;
   position: relative;
+  box-shadow: -20px 8px rgb(14,14,14), 0px -8px rgb(14,14,14);
 
   &::before{
     content: "";
@@ -29,6 +30,7 @@ body{
     left: -12%;
     background: rgb(27,27,27);
     border-radius: 49% 51% 73% 27% / 69% 29% 71% 31%;
+    border: 10px solid rgb(14, 14, 14);
   }
   &::after{
     content: "";
@@ -39,6 +41,7 @@ body{
     right: -12%;
     background: rgb(27,27,27);
     border-radius: 47% 53% 34% 66% / 20% 58% 42% 80%;
+    border: 10px solid rgb(14, 14, 14);
     z-index: -1;
   }
   
