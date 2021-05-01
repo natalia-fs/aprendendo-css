@@ -1,0 +1,240 @@
+// Reset css
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: blanchedalmond;
+}
+
+.container{
+  width: 400px;
+  height: 200px;
+  background: rgb(27,27,27);
+  border-radius: 35%;
+  position: relative;
+
+  &::before{
+    content: "";
+    width: 140px;
+    height: 300px;
+    position: absolute;
+    top: 25%;
+    left: -12%;
+    background: rgb(27,27,27);
+    border-radius: 49% 51% 73% 27% / 69% 29% 71% 31%;
+  }
+  &::after{
+    content: "";
+    width: 140px;
+    height: 300px;
+    position: absolute;
+    top: 25%;
+    right: -12%;
+    background: rgb(27,27,27);
+    border-radius: 47% 53% 34% 66% / 20% 58% 42% 80%;
+    z-index: -1;
+  }
+  
+  .another-div{
+    display: flex;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(27,27,27);
+    border: 10px solid rgb(14, 14, 14);
+    top: 0;
+    right: -8%;
+    
+    &::before{
+      content: "";
+      background: rgb(27, 27, 27);
+      border: 10px solid rgb(14,14,14);
+      width: 90px;
+      height: 50px;
+      border-radius: 45% 45% 0 0;
+      z-index: -1;
+      top: -20%;
+      right: 10%;
+      position: absolute;
+    }
+    .buttons{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+      width: 90px;
+      height: 90px;
+      top: calc(50% - 45px);
+      left: calc(50% - 45px);
+      // transform: rotate(45deg) scale(.9);
+      transform: translate(-27%, -6%) rotate(45deg) scale(.9);
+      position: relative;
+      .btn{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgb(58, 58, 58);
+      }
+    }
+  }
+
+  .direction{
+    display: flex;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(27,27,27);
+    border: 10px solid rgb(14, 14, 14);
+    top: 0;
+    left: -8%;
+    
+    &::before{
+      content: "";
+      background: rgb(27, 27, 27);
+      border: 10px solid rgb(14,14,14);
+      width: 90px;
+      height: 50px;
+      border-radius: 45% 45% 0 0;
+      z-index: -1;
+      top: -20%;
+      left: 10%;
+      position: absolute;
+    }
+
+    .pads{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 60px;
+      place-content: center;
+      transform: rotate(45deg) scale(.9);
+      position: relative;
+      div{
+        width: 30px;
+        height: 30px;
+        background: gray;
+        margin: .2rem;
+      }
+      .pad{
+        background: rgb(58, 58, 58);
+        &::before{
+          content: "";
+          width: 30px;
+          height: 42px;
+          position: absolute;
+          background: rgb(58, 58, 58);
+        }
+      }
+      .pad-1{
+        &::before{
+          transform: translate(-36%, -41%) rotate(45deg);
+        }
+      }
+      .pad-2{
+        &::before{
+          transform: translate(36%, -41%) rotate(-45deg);
+        }
+      }
+      .pad-3{
+        &::before{
+          transform: translate(-37%, 11%) rotate(-45deg);
+        }
+      }
+      .pad-4{
+        &::before{
+          transform: translate(37%, 11%) rotate(45deg);
+        }
+      }
+    }
+  }
+
+  .sticks{
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    bottom: -20px;
+    left: calc(50% - 150px);
+    z-index: 2;
+    div{
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 12px solid rgb(14, 14, 14);
+      background: rgb(58, 58, 58);
+    }
+    div:first-child{
+      &::before{
+        content: "";
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        background: rgb(27, 27, 27);
+        border-radius: 50%;
+        left: calc(50% - 40px);
+        top: calc(50% - 40px);
+      }
+    }
+    div:last-child{
+      right: 0;
+      &::before{
+        content: "";
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        background: rgb(27, 27, 27);
+        border-radius: 50%;
+        left: calc(50% - 40px);
+        top: calc(50% - 40px);
+      }
+    }
+  }
+
+  .buttons{
+    width: 160px;
+    height: 80px;
+    position: relative;
+    top: 50%;
+    left: calc(50% - 80px);
+    z-index: 0;
+
+    div{
+      display: flex;
+      justify-content: space-around;
+      // margin-bottom: 10px;
+      div{
+        background: rgb(58, 58, 58);
+        width: 40px;
+        height: 25px;
+        border-radius: 20%;
+      }
+    }
+    .analog{
+      border-radius: 10%;
+      width: 40px;
+      height: 25px;
+      background: rgb(58, 58, 58);
+      margin: 0 auto;
+      margin-top: 1rem;
+      position: relative;
+      &::before{
+        content: "";
+        width: 40px;
+        height: 7px;
+        position: absolute;
+        background: rgba(255, 0, 0, .2);
+        bottom: -10px;
+        border: 2px inset black;
+      }
+    }
+  }
+}

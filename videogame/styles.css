@@ -1,0 +1,273 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: blanchedalmond;
+}
+
+.container {
+  width: 400px;
+  height: 200px;
+  background: #1b1b1b;
+  border-radius: 35%;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  width: 140px;
+  height: 300px;
+  position: absolute;
+  top: 25%;
+  left: -12%;
+  background: #1b1b1b;
+  border-radius: 49% 51% 73% 27% / 69% 29% 71% 31%;
+}
+
+.container::after {
+  content: "";
+  width: 140px;
+  height: 300px;
+  position: absolute;
+  top: 25%;
+  right: -12%;
+  background: #1b1b1b;
+  border-radius: 47% 53% 34% 66% / 20% 58% 42% 80%;
+  z-index: -1;
+}
+
+.container .another-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: absolute;
+  background: #1b1b1b;
+  border: 10px solid #0e0e0e;
+  top: 0;
+  right: -8%;
+}
+
+.container .another-div::before {
+  content: "";
+  background: #1b1b1b;
+  border: 10px solid #0e0e0e;
+  width: 90px;
+  height: 50px;
+  border-radius: 45% 45% 0 0;
+  z-index: -1;
+  top: -20%;
+  right: 10%;
+  position: absolute;
+}
+
+.container .another-div .buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  width: 90px;
+  height: 90px;
+  top: calc(50% - 45px);
+  left: calc(50% - 45px);
+  -webkit-transform: translate(-27%, -6%) rotate(45deg) scale(0.9);
+          transform: translate(-27%, -6%) rotate(45deg) scale(0.9);
+  position: relative;
+}
+
+.container .another-div .buttons .btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #3a3a3a;
+}
+
+.container .direction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: absolute;
+  background: #1b1b1b;
+  border: 10px solid #0e0e0e;
+  top: 0;
+  left: -8%;
+}
+
+.container .direction::before {
+  content: "";
+  background: #1b1b1b;
+  border: 10px solid #0e0e0e;
+  width: 90px;
+  height: 50px;
+  border-radius: 45% 45% 0 0;
+  z-index: -1;
+  top: -20%;
+  left: 10%;
+  position: absolute;
+}
+
+.container .direction .pads {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 60px;
+  place-content: center;
+  -webkit-transform: rotate(45deg) scale(0.9);
+          transform: rotate(45deg) scale(0.9);
+  position: relative;
+}
+
+.container .direction .pads div {
+  width: 30px;
+  height: 30px;
+  background: gray;
+  margin: .2rem;
+}
+
+.container .direction .pads .pad {
+  background: #3a3a3a;
+}
+
+.container .direction .pads .pad::before {
+  content: "";
+  width: 30px;
+  height: 42px;
+  position: absolute;
+  background: #3a3a3a;
+}
+
+.container .direction .pads .pad-1::before {
+  -webkit-transform: translate(-36%, -41%) rotate(45deg);
+          transform: translate(-36%, -41%) rotate(45deg);
+}
+
+.container .direction .pads .pad-2::before {
+  -webkit-transform: translate(36%, -41%) rotate(-45deg);
+          transform: translate(36%, -41%) rotate(-45deg);
+}
+
+.container .direction .pads .pad-3::before {
+  -webkit-transform: translate(-37%, 11%) rotate(-45deg);
+          transform: translate(-37%, 11%) rotate(-45deg);
+}
+
+.container .direction .pads .pad-4::before {
+  -webkit-transform: translate(37%, 11%) rotate(45deg);
+          transform: translate(37%, 11%) rotate(45deg);
+}
+
+.container .sticks {
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 150px);
+  z-index: 2;
+}
+
+.container .sticks div {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 12px solid #0e0e0e;
+  background: #3a3a3a;
+}
+
+.container .sticks div:first-child::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background: #1b1b1b;
+  border-radius: 50%;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+}
+
+.container .sticks div:last-child {
+  right: 0;
+}
+
+.container .sticks div:last-child::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background: #1b1b1b;
+  border-radius: 50%;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+}
+
+.container .buttons {
+  width: 160px;
+  height: 80px;
+  position: relative;
+  top: 50%;
+  left: calc(50% - 80px);
+  z-index: 0;
+}
+
+.container .buttons div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container .buttons div div {
+  background: #3a3a3a;
+  width: 40px;
+  height: 25px;
+  border-radius: 20%;
+}
+
+.container .buttons .analog {
+  border-radius: 10%;
+  width: 40px;
+  height: 25px;
+  background: #3a3a3a;
+  margin: 0 auto;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.container .buttons .analog::before {
+  content: "";
+  width: 40px;
+  height: 7px;
+  position: absolute;
+  background: rgba(255, 0, 0, 0.2);
+  bottom: -10px;
+  border: 2px inset black;
+}
+/*# sourceMappingURL=styles.css.map */
