@@ -1,0 +1,108 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(22, 17, 53);
+}
+
+.container{
+  width: 300px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .head{
+    background: #FFF;
+    width: 300px;
+    height: 250px;
+    border-radius: 48% 50% 49% 47% / 61% 61% 37% 38%;
+    position: relative;
+
+    .eyes{
+      width: 240px;
+      height: 150px;
+      background: black;
+      border-radius: 48% 50% 49% 47% / 61% 61% 37% 38%;
+      position: relative;
+      margin: 0 auto;
+      top: 25%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      &::before{
+        content: "";
+        width: 50px;
+        height: 50px;
+        // background: #35a2dd;
+        background: repeating-linear-gradient(
+          0deg,
+          #35a2dd,
+          #215e80 10px,
+          #35a2dd 10px,
+          #215e80 20px
+        );
+        position: relative;
+        border-radius: 50%;
+        left: 10%;
+      }
+      &::after{
+        content: "";
+        width: 50px;
+        height: 50px;
+        background: repeating-linear-gradient(
+          0deg,
+          #35a2dd,
+          #215e80 10px,
+          #35a2dd 10px,
+          #215e80 20px
+        );
+        position: relative;
+        border-radius: 50%;
+        right: 10%;
+      }
+    }
+  }
+
+  .body{
+    background: #FFF;
+    width: 250px;
+    height: 380px;
+    border-radius: 48% 50% 47% 49% / 23% 21% 73% 75%;
+    position: relative;
+    margin-top: 3%;
+
+    &::before{
+      content: "";
+      background: #FFF;
+      width: 40px;
+      height: 240px;
+      position: absolute;
+      border-radius: 37% 64% 47% 49% / 53% 10% 86% 48%;
+      left: -20%;
+      top: 20%;
+    }
+    &::after{
+      content: "";
+      background: #FFF;
+      width: 40px;
+      height: 240px;
+      position: absolute;
+      border-radius: 40% 51% 40% 53% / 10% 49% 49% 91%;
+      right: -20%;
+      top: 20%;
+    }
+  }
+  
+}
