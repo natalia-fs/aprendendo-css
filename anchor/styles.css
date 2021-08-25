@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: cadetblue;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.head {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 50px solid white;
+}
+
+.shank {
+  background: white;
+  width: 60px;
+  height: 250px;
+  position: absolute;
+  top: 25%;
+}
+
+.shank::before {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 60px;
+  background: white;
+  top: 15%;
+  border-radius: 15px;
+  left: calc(50% - 85px);
+}
+
+.arms {
+  position: absolute;
+  width: 380px;
+  height: 160px;
+  border: 60px solid white;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  border-top: 0;
+  bottom: 13%;
+}
+
+.arms::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 60px solid white;
+  top: -60%;
+  left: -34%;
+}
+
+.arms::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 60px solid white;
+  top: -60%;
+  right: -34%;
+}
+/*# sourceMappingURL=styles.css.map */
