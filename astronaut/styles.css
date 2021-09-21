@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  /* background: #000000; */
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.capacete {
+  background: #c4c4c4;
+  width: 216px;
+  height: 192px;
+  border-radius: 64px;
+  position: relative;
+}
+
+.capacete::before {
+  content: "";
+  background: #fff;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  z-index: 2;
+}
+.capacete::after {
+  content: "";
+  background: #fff;
+  width: 48px;
+  height: 8px;
+  border-radius: 8px;
+  position: absolute;
+  top: 25%;
+  left: 48%;
+  z-index: 2;
+}
+
+.visor {
+  background: #3c4173;
+  width: 180px;
+  height: 128px;
+  border-radius: 64px 64px 48px 48px;
+  margin: 0 auto;
+  top: 20%;
+  position: relative;
+}
+
+.visor::before {
+  content: "";
+  background: #3c4173;
+  width: 192px;
+  height: 64px;
+  border-radius: 50%;
+  bottom: -35%;
+  left: calc(50% - 96px);
+  position: absolute;
+  z-index: -1;
+}
+
+.orelhas {
+  width: 248px;
+  height: 64px;
+  /* background: #ffffff; */
+  position: relative;
+  left: -16px;
+  top: -32%;
+}
+.orelhas::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 64px;
+  background: #c4c4c4;
+  border-radius: 16px 0 0 8px;
+}
+.orelhas::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 64px;
+  right: 0;
+  background: #c4c4c4;
+  border-radius: 0 16px 8px 0;
+}
+
+.antena{
+  background: #c4c4c4;
+  width: 4px;
+  height: 64px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.antena::before{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #3c4173;
+  width: 16px;
+  height: 16px;
+  top: -15px;
+  left: -6px;
+}
+
+.corpo{
+  background: #c4c4c4;
+  width: 216px;
+  height: 128px;
+  border-radius: 64px 64px 0 0;
+  z-index: -2;
+  position: relative;
+}
+
+.corpo::before{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 48px;
+  background: #3c4173;
+  bottom: 0;
+  margin-left: 48px;
+}
+
+.corpo::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 48px;
+  background: #3c4173;
+  bottom: 0;
+  right: 0;
+  margin-right: 48px;
+}
+
+.mochila{
+  background: #949494;
+  width: 256px;
+  height: 161px;
+  position: absolute;
+  z-index: -3;
+  border-radius: 32px 32px 16px 16px;
+  bottom: 10%;
+}
