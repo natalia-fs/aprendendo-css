@@ -26,7 +26,8 @@ body{
     background: #808080;
     width: 216px;
     height: 128px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
+    border-radius: 9.25% / 15.625%;
     position: relative;
 }
 
@@ -45,7 +46,8 @@ body{
     background: #fff;
     width: 224px;
     height: 136px;
-    border-radius: 20px ;
+    /* border-radius: 20px ; */
+    border-radius: 9.25% / 15.625%;
     z-index: -1;
     top: -4px;
     left: -4px;
