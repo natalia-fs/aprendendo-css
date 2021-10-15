@@ -1,0 +1,48 @@
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  background: crimson;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+div{
+  background: black;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 25px double crimson;
+  position: fixed;
+}
+
+div::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-left: 90px solid transparent;
+  border-bottom: 250px solid crimson;
+  border-right: 90px solid transparent;
+}
+div::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-left: 90px solid transparent;
+  border-top: 250px solid crimson;
+  border-right: 90px solid transparent;
+}
