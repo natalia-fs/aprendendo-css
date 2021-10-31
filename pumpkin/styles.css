@@ -1,0 +1,119 @@
+/* Reset */
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #202020;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #fff; */
+  width: 512px;
+  height: 512px;
+  position: fixed;
+}
+
+.container > div{
+  position: absolute;
+}
+
+.container > .front{
+  width: 96px;
+  height: 192px;
+  background: #ffa500;
+  border: 3px solid #fff;
+  border-radius: 50% / 30%;
+  border-left: none;
+  border-right: none;
+  transform: scale(1.15);
+  z-index: 3;
+}
+
+.container > .mid, .container > .back{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 270px;
+}
+
+.mid > div, .back > div{
+  background: #ffa500;
+  width: 96px;
+  height: 192px;
+  border: 3px solid #fff;
+
+}
+.mid > div{
+  z-index: 2;
+  border-radius: 50% 30% 30% 50%;
+  border-left: none;
+  border-right: none;
+}
+.mid > div:last-child{
+  border-radius: 30% 50% 50% 30%;
+}
+
+.container > .back{
+  width: 490px;
+}
+.back > div{
+  border-radius: 50% 35% 35% 50%;
+  transform: scale(.85);
+}
+.back > div:last-child{
+  border-radius: 35% 50% 50% 35%;
+}
+
+.face{
+  top: 35%;
+  position: relative;
+  width: 96px;
+  height: 70px;
+  border: 15px solid #ff4500;
+  border-radius: 50%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  transform: scale(1.2);
+}
+
+.face::before, .face::after{
+  content: "";
+  background: #ff4500;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border-bottom: 5px solid #a52a2a;
+}
+.face::before{
+  left: 10px;
+  border-left: 5px solid #a52a2a;
+}
+.face::after{
+  border-right: 5px solid #a52a2a;
+  right: 10px;
+}
+
+.green{
+  width: 30px;
+  height: 80px;
+  border: 10px solid #008000;
+  border-right: none;
+  border-bottom: none;
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  border-radius: 50%;
+  transform: translate(35%);
+}
