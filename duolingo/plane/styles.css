@@ -1,0 +1,150 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container{
+  position: fixed;
+  width: 560px;
+  height: 560px;
+  background: crimson;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.base{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.base::before, .base::after{
+  content: "";
+  position: absolute;
+}
+
+.base::before{
+  width: 50px;
+  height: 50px;
+  background: #cccccc;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.base::after{
+  width: 80px;
+  height: 36px;
+  background: #00ccff;
+  border-radius: 15px;
+  transform: translate(-50%, -145%) perspective(5px) rotateX(2.2deg);
+  top: 50%;
+  left: 50%;
+}
+
+.asas{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 480px;
+  height: 160px;
+  z-index: 1;
+  position: absolute;
+}
+
+.asas div{
+  background: #fff;
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: 22.5%;
+}
+
+.asas div:first-child{
+  border-radius: 25% 0 0 25% / 50%;
+  transform: perspective(5px) rotateY(-1.6deg) rotateZ(11deg);
+  left: -12%;
+}
+.asas div:last-child{
+  border-radius: 0 25% 25% 0 / 50%;
+  right: -12%;
+  transform: perspective(5px) rotateY(1.6deg) rotateZ(-11deg);
+}
+
+.turbinas{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 480px;
+  height: 100px;
+  z-index: 1;
+  top: 47.5%;
+}
+
+.turbinas div{
+  background: #fff;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.turbinas div::before{
+  content: "";
+  background: #00ccff;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border-radius: 50%;
+  border: 15px solid #007ebd;
+}
+
+.cauda{
+  background: #fff;
+  width: 30px;
+  height: 60px;
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  transform: translate(-50%, -220%) perspective(5px) rotateX(2.5deg);
+  border-radius: 50% 50% 0 0;
+}
+
+.rodas{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  bottom: 150px;
+}
+
+.rodas div{
+  background: #007ebd;
+  width: 20px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+.rodas div:nth-child(3){
+  margin-left: 27%;
+}
