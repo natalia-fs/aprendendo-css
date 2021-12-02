@@ -1,3 +1,8 @@
+# Duolingo's Art Style - Plane
+
+- HTML
+- CSS
+
 ## Preview
 
 <p align="center">
