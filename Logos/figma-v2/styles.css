@@ -1,0 +1,64 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --laranja: #f24e1e;
+  --salmao: #ff7262;
+  --roxo: #a259ff;
+  --azul: #1abcfe;
+  --verde: #0acf83;
+  --preto: #141414;
+}
+
+body{
+  background: var(--preto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container{
+  display: flex;
+  width: 200px;
+  height: 300px;
+}
+
+.left, .right{
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.left{
+  background: var(--laranja);
+  border-radius: 50% 0 0 50%;
+  box-shadow: 0 100px var(--roxo);
+}
+
+.left::before, .right::before{
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.left::before{
+  background: var(--verde);
+  top: 200px;
+  border-radius: 50% 0 50% 50%;
+}
+
+.right{
+  background: var(--salmao);
+  border-radius: 0 50% 50% 0;
+}
+
+.right::before{
+  background: var(--azul);
+  top: 100px;
+  border-radius: 50%;
+}
