@@ -1,0 +1,127 @@
+*. *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  background: #141414;
+}
+
+.android{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.head{
+  position: relative;
+  width: 200px;
+  height: 90px;
+  background: #50d850;
+  border-radius: 50% /100% 100% 0 0;
+}
+
+.head::before, .head::after{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.head::before{
+  left: 25%;
+}
+.head::after{
+  right: 25%;
+}
+
+.aux{
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  top: -20px;
+}
+
+.aux::before, .aux::after{
+  content: "";
+  background: #50d850;
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  transform: rotate(-30deg);
+  border-radius: 8px;
+}
+
+.aux::before{
+  left: 25px;
+}
+
+.aux::after{
+  right: 25px;
+  transform: rotate(30deg);
+}
+
+.body{
+  position: relative;
+  width: 200px;
+  height: 150px;
+  background: #50d850;
+  margin-top: 10px;
+  border-radius: 0 0 15% 15%;
+}
+
+.legs{
+  width: 120px;
+  height: 70px;
+  margin: 0 auto;
+  position: relative;
+  bottom: 0;
+}
+
+.legs::before, .legs::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  bottom: 0;
+  background: #50d850;
+  border-radius: 0 0 20px 20px;
+}
+
+.legs::after{
+  right: 0;
+}
+
+.arms{
+  width: 300px;
+  height: 120px;
+  margin: 0 auto;
+  bottom: 34%;
+  position: absolute;
+}
+
+.arms::before, .arms::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  background: #50d850;
+  border-radius: 20px;
+}
+
+.arms::after{
+  right: 0;
+}
