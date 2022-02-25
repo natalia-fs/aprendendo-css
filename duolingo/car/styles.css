@@ -1,0 +1,151 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carro{
+  width: 420px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.parabrisa{
+  position: relative;
+  border: 10px solid red;
+  border-bottom: none;
+  width: 260px;
+  height: 160px;
+  border-radius: 25px 25px 0 0;
+  background: #50a6df;
+  transform: perspective(5px) rotateX(.15deg);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.parabrisa::before{
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  background: #ffffff45;
+  transform: rotate(30deg);
+  top: -60%;
+}
+
+.banco{
+  position: absolute;
+  width: 220px;
+  height: 60px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+}
+
+.banco::before, .banco::after{
+  content: "";
+  position: relative;
+  width: 80px;
+  height: 60px;
+  background: #00000045;
+  z-index: 2;
+  top: 0;
+  border-radius: 20px;
+}
+.retrovisor{
+  position: absolute;
+  display: flex;
+  width: 400px;
+  height: 40px;
+  top: 120px;
+}
+
+.retrovisor::before, .retrovisor::after{
+  content: "";
+  position: absolute;
+  background: red;
+  width: 60px;
+  height: 40px;
+  border-radius: 20px;
+}
+.retrovisor::after{
+  right: 0;
+}
+.farol{
+  width: 300px;
+  height: 60px;
+  background: red;
+  position: relative;
+  top: 3px;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.farol::before, .farol::after{
+  content: "";
+  position: relative;
+  background: #fff;
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 10px 15px;
+}
+
+
+.para-choque{
+  width: 330px;
+  height: 50px;
+  background: gray;
+  position: relative;
+  top: 3px;
+  border-radius: 15px;
+}
+
+.para-choque::before, .para-choque::after{
+  content: "";
+  position: absolute;
+  background: darkgray;
+  width: 30px;
+  height: 60px;
+  top: -5px;
+  border-radius: 15px;
+  margin: 0 90px;
+}
+.para-choque::after{
+  right: 0;
+}
+
+.rodas{
+  position: relative;
+  width: 280px;
+  height: 60px;
+}
+
+.rodas::before, .rodas::after{
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 60px;
+  background: #333333;
+  border-radius: 0 0 15px 15px;
+  z-index: -1;
+}
+
+.rodas::after{
+  right: 0;
+}
