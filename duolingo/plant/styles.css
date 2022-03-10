@@ -1,0 +1,90 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container{
+  min-width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.folha{
+  background: green;
+  border-radius: 100% 5%;
+  width: 25%;
+  height: 25%;
+  filter: brightness(.75);
+}
+
+.folha-1{
+  margin: 0 auto;
+  transform: scale(.9) rotate(-45deg) translate(-15%, -10%);
+  filter: brightness(.8);
+}
+
+.folha-2{
+  position: absolute;
+  transform: scale(1.15) rotate(5deg) translate(150%, -72%);
+  filter: brightness(.65);
+}
+
+.folha-3{
+  position: absolute;
+  transform: scale(.9) rotateY(180deg) rotate(10deg) translate(-110%, -40%);
+  filter: brightness(1);
+}
+
+.folha-4{
+  transform: scale(1.2) rotateY(180deg) rotate(5deg) translate(-68%, 30%);
+  filter: brightness(.45);
+}
+
+.folha-5{
+  position: absolute;
+  right: 0;
+  transform: scale(1) translate(-110%, -65%);
+  filter: brightness(.8);
+}
+
+.vaso{
+  background: chocolate;
+  position: relative;
+  margin: 10% auto 0 auto;
+  width: 60%;
+  height: 15%;
+  border-radius: .7rem;
+}
+
+.vaso::before{
+  content: "";
+  position: absolute;
+  background: inherit;
+  width: 80%;
+  height: 125%;
+  top: 105%;
+  left: 50%;
+  transform: translate(-50%) perspective(5px) rotateX(-.6deg);
+  border-radius: 0 0 .7rem .7rem;
+}
+
+.vaso::after{
+  content: "";
+  position: absolute;
+  background: #00000035;
+  width: 85%;
+  height: 40%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%) perspective(5px) rotateX(-.6deg);
+}
