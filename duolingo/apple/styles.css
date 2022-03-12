@@ -1,0 +1,80 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: lightpink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container{
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.apple{
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apple>div{
+  background: #ea4747;
+  width: 300px;
+  height: 300px;
+  border-radius: 150px 150px 50% 50%;
+  transform: rotate(22deg) translate(-55%, 15%);
+}
+
+.apple>div:first-child{
+  transform: rotate(-22deg);
+}
+
+.apple::before, .apple::after{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.apple::before{
+  background: #ffffff25;
+  width: 75px;
+  height: 75px;
+  z-index: 2;
+  transform: translate(50%, -60%);
+}
+.apple::after{
+  background: #00000025;
+  width: 50px;
+  height: 50px;
+  transform: translate(-270%, 100%);
+  box-shadow: 50px 50px 0 -7px #00000025;
+}
+
+.leaf{
+  background: lawngreen;
+  width: 100px;
+  height: 100px;
+  border-radius: 10% 100%;
+  transform: translateX(30%);
+  border: 1px solid green;
+}
+
+.leaf::before{
+  content: "";
+  position: absolute;
+  background: saddlebrown;
+  width: 20px;
+  height: 80px;
+  border-radius: 20px 20px 100% 100%;
+  transform: translate(502%, 50%);
+}
