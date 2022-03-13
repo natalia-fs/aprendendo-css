@@ -1,0 +1,67 @@
+/* RESET CSS */
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  /* Centralizar o desenho */
+  background: darkviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: lime;
+  border-radius: 50% 50% 50% 15%;
+  width: 300px;
+  height: 300px;
+
+  transform: rotate(-45deg);
+  outline: 8px solid white;
+}
+
+.face{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  transform: rotate(45deg) translateY(25%);
+}
+
+.eyes{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.eyes>div{
+  background: black;
+  width: 120px;
+  height: 120px;
+  border-radius: 5% 100%;
+  transform: rotateZ(-7deg);
+}
+
+.eyes>div:last-child{
+  transform: rotateX(180deg) rotateZ(-7deg);
+}
+
+.smile{
+  border: none;
+  border-bottom: 25px solid;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 5%;
+}
