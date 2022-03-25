@@ -1,0 +1,147 @@
+/* Reset */
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #3D3D3D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container{
+  position: fixed;
+  width: 250px;
+  height: 400px;
+}
+
+.container::before{
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 320px;
+  top: 40px;
+  background: #c86464;
+  clip-path: polygon(
+    10% 18%, 10% 38%,
+    5% 42%, 5% 62%,
+    12% 70%, 12% 84%,
+    25% 100%, 75% 100%,
+    88% 84%, 88% 70%,
+    95% 62%, 95% 42%,
+    90% 38%, 90% 18%
+  );
+}
+
+.container::after{
+  content: "";
+  position: absolute;
+  background: #c86464;
+  z-index: 1;
+  width: 200px;
+  height: 60px;
+  top: 40px;
+  left: 0;
+  transform: translate(25px);
+  border-radius: 50% / 100% 100% 0 0;
+}
+
+.inner{
+  background: #e7b16b;
+  min-width: 240px;
+  height: 310px;
+  position: relative;
+  z-index: 3;
+  top: 50px;
+  margin: 0 auto;
+  clip-path: polygon(
+    15% 13%, 15% 40%,
+    10% 45%, 10% 60%,
+    22% 70%, 25% 82%,
+    20% 87%, 27% 95%,
+    35% 95%, 35% 90%,
+    65% 90%, 65% 95%,
+    73% 95%, 80% 87%,
+    75% 82%, 78% 70%,
+    90% 60%, 90% 45%,
+    85% 40%, 85% 13%
+  );
+}
+
+.line{
+  position: absolute;
+  min-width: 150px;
+  height: 50px;
+  background: black;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  clip-path: polygon(
+    20% 45%, 30% 20%,
+    70% 20%, 80% 45%,
+    100% 0, 100% 40%,
+    80% 80%, 65% 50%,
+    35% 50%, 20% 80%,
+    0 40%, 0 0
+  );
+  opacity: .4;
+}
+
+.aux{
+  position: absolute;
+  background: #e7b16b;
+  min-width: 175px;
+  height: 30px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 202%);
+  z-index: 3;
+  border-radius: 50% / 100% 100% 0 0;
+}
+
+.aux::before{
+  content: "";
+  position: absolute;
+  background: #c86464;
+  width: 80px;
+  height: 70px;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%) perspective(5px) rotateX(-1.5deg);
+}
+
+.eyes{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 180px;
+  height: 50px;
+  z-index: 3;
+  top: -35%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.eyes::before, .eyes::after{
+  content: "";
+  position: relative;
+  background: white;
+  width: 50px;
+  height: 15px;
+  border-radius: 15% 15% 50% 50%;
+  transform: perspective(6px) rotateY(5deg) rotateZ(10deg);
+}
+
+.eyes::after{
+  transform: perspective(6px) rotateY(-5deg) rotateZ(-10deg);
+}
+
+.eyes:hover{
+  filter: drop-shadow(0 0 5px aqua);
+}
