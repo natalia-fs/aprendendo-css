@@ -1,0 +1,131 @@
+/* RESET */
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --lilas: #c887ee;
+}
+/* Centralizando corpo da página */
+body{
+  background: lemonchiffon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container{
+  position: relative;
+  width: 400px;
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+
+.head{
+  width: 300px;
+  height: 200px;
+  background: var(--lilas);
+  border-radius: 50% 50% 20% 20% / 78% 78% 22% 22%;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+.eyes{
+  position: relative;
+  width: 60px;
+  height: 40px;
+}
+
+.eyes::before, .eyes::after{
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 40px;
+  background: var(--lilas);
+  filter: brightness(.6);
+  border-radius: 25px;
+}
+
+.eyes::after{
+  right: 0;
+}
+
+.nose{
+  width: 130px;
+  height: 70px;
+  background: #fff;
+  border-radius: 70px;
+  margin-top: 4px;
+
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.nose::before{
+  content: "";
+  position: absolute;
+  background: pink;
+  width: 25px;
+  height: 25px;
+  border-radius: 25%;
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+.detail{
+  position: relative;
+  width: 300px;
+  transform: translateY(-60px);
+}
+.detail::before, .detail::after{
+  content: "";
+  position: absolute;
+  background: var(--lilas);
+  filter: brightness(.8);
+  width: 60px;
+  height: 25px;
+  border-radius: 0 25px 25px 0;
+  box-shadow: -15px 35px var(--lilas);
+}
+.detail::after{
+  right: 0;
+  transform: rotateY(180deg);
+}
+.ears{
+  position: relative;
+  z-index: -1;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ears::before, .ears::after{
+  content: "";
+  position: absolute;
+  background: var(--lilas);
+  width: 75px;
+  height: 75px;
+  border-radius: 20%;
+  transform: skewY(40deg) rotate(5deg);
+  top: 65px;
+}
+.ears::before{
+  left: 45px;
+}
+.ears::after{
+  right: 45px;
+  transform: skewY(-40deg) rotate(-5deg);
+}
