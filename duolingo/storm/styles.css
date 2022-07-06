@@ -1,0 +1,121 @@
+/* Reset */
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: aliceblue;
+}
+
+.container{
+  position: relative;
+  width: 250px;
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.cloud{
+  width: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.base{
+  background: darkgrey;
+  width: 200px;
+  height: 75px;
+  border-radius: 50px;
+}
+
+.center{
+  position: relative;
+  background: darkgrey;
+  width: 100px;
+  height: 50px;
+  top: 5%;
+  border-radius: 50px 50px 0 0;
+}
+
+.top, .bottom{
+  background: gold;
+  width: 30px;
+  height: 30px;
+}
+.top{
+  border-radius: 0 0 15% 15%;
+  transform: skewX(-15deg) translateX(-40%);
+}
+.bottom{
+  position: relative;
+  transform: translate(10%, -10%) scaleY(1.7);
+  overflow: hidden;
+  background: transparent;
+}
+.bottom::before{
+  content: "";
+  position: absolute;
+  background: gold;
+  width: 35px;
+  height: 35px;
+  border-radius: 15%;
+  transform: rotate(45deg);
+  top: -45%;
+  left: -45%;
+}
+.lightning{
+  transform: translateX(50%) scale(1.5);
+  z-index: -1;
+}
+
+.container:hover .lightning{
+  animation: lightning_start .3s ease;
+}
+
+.container:hover .lightning>div{
+  animation: lightning .15s infinite;
+}
+
+.container:hover .cloud .center{
+  animation: cloud_1 .25s infinite ease;
+}
+.container:hover .cloud .base{
+  animation: cloud .35s infinite ease;
+}
+
+@keyframes lightning{
+  0% { filter: brightness(.85);}
+  100% { filter: brightness(1);}
+}
+
+@keyframes lightning_start{
+  0% { transform: scale(0) translateX(50%);}
+  90% { transform: scale(1.7) translateX(50%);}
+  100% { transform: scale(1.5) translateX(50%);}
+}
+@keyframes cloud_1{
+  0% {transform: scaleY(1) translateX(4%);}
+  25% {transform: scaleY(1) translateX(0%);}
+  50% {transform: scaleY(1) translateX(-4%);}
+  100% {transform: scaleY(1.1) translateX(0);}
+}
+@keyframes cloud{
+  0% {transform: scale(1);}
+  25% {transform: scale(1.05, 1);}
+  50% {transform: scale(1, 1.05);}
+  75% {transform: scale(1.05, 1);}
+  100% {transform: scale(1.05);}
+}
