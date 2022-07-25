@@ -22,7 +22,7 @@ body{
   position: relative;
   width: 300px;
   height: 300px;
-  border: 25px solid purple;
+  border: 25px solid var(--dark);
   border-radius: 50%;
   background: white;
 
@@ -45,18 +45,18 @@ body{
 
 .logo{
   position: relative;
-  background: #691762;
+  background: var(--dark);
   width: 120px;
   height: 40px;
   border-radius: 120px 0;
-  box-shadow: 40px -50px #8402ba;
+  box-shadow: 40px -50px var(--light);
   left: -7.5%;
 }
 
 .logo::before{
   content: "";
   position: absolute;
-  background: #8402ba;
+  background: var(--light);
   width: 40px;
   height: 40px;
   top: 40px;
