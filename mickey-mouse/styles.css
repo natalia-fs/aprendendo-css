@@ -25,7 +25,6 @@ body {
 }
 
 .container{
-  transform: scale(.8);
   position: relative;
   width: 400px;
   height: 380px;
@@ -80,8 +79,8 @@ body {
 }
 
 .face::after{
-  transform: rotate(20deg);
   margin-left: 50px;
+  transform: rotate(20deg);
 }
 
 .face span::before, .face span::after{
@@ -110,11 +109,11 @@ body {
 }
 
 .eyes div{
-  position: relative;
   background: var(--dark);
   width: 15px;
   height: 40px;
   border-radius: 50%;
+  position: relative;
 }
 
 .eyes div::before{
