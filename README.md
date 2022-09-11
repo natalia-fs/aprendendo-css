@@ -1,36 +1,42 @@
-# Artes feitas com CSS e SASS
+# Desenhos feitos com CSS
+
+### Desenhando com CSS até aprender o suficiente sobre isso
 
 Neste repositório estão os desenhos que fiz para melhorar minhas habilidades em CSS e SASS/SCSS.
 Sempre que a arte original não for minha, colocarei a fonte para dar os devidos créditos ao responsável.
 
 ---
-## Os desenhos que mais gostei de replicar
+## Símbolos da Marvel
 
-### [Menino, elefante e macaco](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo-animals):
+- [Homem de ferro](https://github.com/natalia-fs/aprendendo-css/tree/master/iron-man-mask)
+- [Símbolo da Viúva Negra](https://github.com/natalia-fs/aprendendo-css/tree/master/black-widow)
+- [Símbolo da Capitã Marvel](https://github.com/natalia-fs/aprendendo-css/tree/master/captain-marvel)
+- [Escudo do Capitão América](https://github.com/natalia-fs/aprendendo-css/tree/master/cap-america)
+- [Martelo do Thor (Mjolnir)](https://github.com/natalia-fs/aprendendo-css/tree/master/mjolnir)
+- [Símbolo do Homem-Aranha](https://github.com/natalia-fs/aprendendo-css/tree/master/spider-man-logo)
+- [Olho de Agamotto](https://github.com/natalia-fs/aprendendo-css/tree/master/doctor-strange)
 
-<div align="center">
-    <img src="duolingo-animals/preview-duo.gif" alt="Menino, elefante e macaco">
-</div>
+## Me desenhando com CSS
 
-### [Me desenhando em estilo Flat Art com CSS](https://github.com/natalia-fs/aprendendo-css/tree/master/Rostos/drawing-myself):
-
-<div align="center">
-    <img src="Rostos/drawing-myself/preview-drawing-myself.png" alt="Eu">
-</div>
-
-### [Among Us - Pixel art](https://github.com/natalia-fs/aprendendo-css/tree/master/among-us-pixel-art):
+- [Me desenhando em estilo Flat Art](https://github.com/natalia-fs/aprendendo-css/tree/master/Rostos/drawing-myself):
 
 <div align="center">
-    <img src="among-us-pixel-art/amongus-preview.gif" alt="Tripulante vermelho">
+    <img src="https://github.com/natalia-fs/aprendendo-css/raw/master/Rostos/drawing-myself/preview-drawing-myself.png">
 </div>
 
-### [Picolé animado](https://github.com/natalia-fs/aprendendo-css/tree/master/Icecream-animation):
+## Estilo de arte do Duolingo
 
-<div align="center">
-    <img src="Icecream-animation/preview.gif" alt="Ice cream">
-</div>
+- [Bea](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo-draw)
+- [Junior (animado)](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo-animals)
+- [dog](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo-dog)
+- [Caneca](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo-beer)
+- [Urso](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo/bear)
+- [Maçã](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo/apple)
+- [Planta](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo/plant)
+- [Avião](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo/plane)
+- [Carro](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo/car)
+- [Nuvem de chuva (animado)](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo/storm)
 
-### [Personagem do app Duolingo](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo-draw):
 
 <div align="center">
     <img src="duolingo-draw/preview.png" alt="Personagem">
