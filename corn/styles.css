@@ -1,0 +1,122 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container{
+  position: fixed;
+  width: 300px;
+  height: 300px;
+}
+
+.corn{
+  position: relative;
+  background: goldenrod;
+  width: 140px;
+  height: 250px;
+  border-radius: 50% 50% 40% 40%;
+  top: -30%;
+  margin: 0 auto;
+  transform: perspective(5px) rotateX(1.3deg) scale(.85);
+  filter: drop-shadow(0 0 6px #00000055);
+  overflow: hidden;
+}
+
+.husk{
+  background: yellowgreen;
+  position: absolute;
+  bottom: 0;
+  filter: drop-shadow(0 -2px 6px #00000055);
+}
+
+.husk-1{
+  width: 160px;
+  height: 160px;
+  left: 3%;
+  border-radius: 2.5% 100%;
+  bottom: 3.5%;
+  transform: rotate(10deg);
+  z-index: 2;
+}
+
+.husk-2{
+  width: 180px;
+  height: 190px;
+  border-radius: 100% 2.5%;
+  right: 0;
+  bottom: 4.5%;
+  transform: rotate(-10deg);
+}
+
+.husk-3{
+  width: 130px;
+  height: 150px;
+  border-radius: 2.5% 100%;
+  z-index: -1;
+  top: 25%;
+  left: 7.5%;
+  transform: rotate(12deg);
+}
+
+.husk-4{
+  width: 100px;
+  height: 150px;
+  background: transparent;
+  border: 30px solid yellowgreen;
+  border-radius: 50%;
+  border-right: transparent;
+  border-bottom: transparent;
+  right: 0;
+  top: 10%;
+  z-index: -1;
+  transform: rotate(7deg);
+}
+
+.husk-5{
+  position: relative;
+  margin: 0 auto;
+  width: 50px;
+  height: 25px;
+  border-radius: 10%;
+  bottom: -12%;
+  z-index: -2;
+  transform: perspective(5px) rotateX(-4deg);
+}
+
+.husk-3, .husk-4, .husk-5{
+  filter: brightness(.8);
+}
+
+.corn::before, .corn::after{
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 260px;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 10px,
+    #fbda4a 10px,
+    #fbda4a 15px
+  );
+}
+
+.corn::after{
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 10px,
+    #fbda4a 10px,
+    #fbda4a 12px
+  );
+}
