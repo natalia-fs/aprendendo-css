@@ -43,13 +43,15 @@ Sempre que a arte original não for minha, colocarei a fonte para dar os devidos
 
 - [Bea](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo-draw)
 - [🔗 Junior (animado)](https://natalia-fs.github.io/aprendendo-css/duolingo-animals)
-- [dog](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo-dog)
-- [Caneca](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo-beer)
-- [Urso](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo/bear)
-- [Maçã](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo/apple)
-- [Planta](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo/plant)
-- [Avião](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo/plane)
-- [Carro](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo/car)
+- [🔗 Dog](https://natalia-fs.github.io/aprendendo-css/duolingo-dog)
+- [🔗 Caneca](https://natalia-fs.github.io/aprendendo-css/duolingo-beer)
+- [🔗 Urso](https://natalia-fs.github.io/aprendendo-css/duolingo/bear)
+- [🔗 Maçã](https://natalia-fs.github.io/aprendendo-css/duolingo/apple)
+- [🔗 Planta](https://natalia-fs.github.io/aprendendo-css/duolingo/plant)
+- [🔗 Avião](https://natalia-fs.github.io/aprendendo-css/duolingo/plane)
+    - [Speedcode](https://www.youtube.com/watch?v=5s4JLLKjiJo)
+- [🔗 Carro](https://natalia-fs.github.io/aprendendo-css/duolingo/car)
+    - [Speedcode](https://www.youtube.com/watch?v=i0-mFZh31vo)
 - [🔗 Nuvem de chuva (animado)](https://natalia-fs.github.io/aprendendo-css/duolingo/storm)
 
 
