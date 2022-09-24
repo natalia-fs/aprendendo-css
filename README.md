@@ -41,7 +41,7 @@ Sempre que a arte original não for minha, colocarei a fonte para dar os devidos
 
 ## Estilo de arte do Duolingo
 
-- [Bea](https://github.com/natalia-fs/aprendendo-css/tree/master/duolingo-draw)
+- [🔗 Bea](https://natalia-fs.github.io/aprendendo-css/duolingo-draw)
 - [🔗 Junior (animado)](https://natalia-fs.github.io/aprendendo-css/duolingo-animals)
 - [🔗 Dog](https://natalia-fs.github.io/aprendendo-css/duolingo-dog)
 - [🔗 Caneca](https://natalia-fs.github.io/aprendendo-css/duolingo-beer)
