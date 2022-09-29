@@ -1,0 +1,146 @@
+:root{
+  --dark: #141414;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #2b78c5;
+  /* background: #222; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container{
+  position: fixed;
+  width: 280px;
+  height: 400px;
+}
+
+.mask{
+  position: relative;
+  background: #9a083b;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  border-radius: 50% / 30% 30% 60% 60%;
+}
+
+.eyes {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.eyes>span{
+  position: relative;
+  width: 145px;
+  height: 100px;
+  transform: rotateZ(-35deg);
+}
+
+.eyes>span:first-child{
+  transform: rotateY(180deg) rotateZ(-35deg);
+}
+
+.eyes>span::before,
+.eyes>span::after{
+  content: "";
+  position: absolute;
+}
+
+.eyes>span::before{
+  background: var(--dark);
+  width: 50px;
+  height: 70px;
+  top: 5px;
+  right: 10px;
+  border-radius: 50% 10%;
+  transform: skew(-32deg);
+}
+
+.eyes>span::after{
+  background: #e5e5e5;
+  width: 120px;
+  height: 75px;
+  border-radius: 15% 5% 60px 60px;
+  bottom: 20px;
+  right: 10%;
+  border: 10px solid var(--dark);
+}
+
+.eyes>span>div{
+  position: absolute;
+  background: #e5e5e5;
+  width: 40px;
+  height: 52px;
+  top: 15px;
+  right: 25px;
+  border-radius: 50% 10%;
+  transform: skew(-32deg);
+  z-index: 2;
+}
+
+.container:hover{
+  animation: tilt 8s infinite;
+}
+.container:hover .eyes>span>div{
+  animation: corner 8s infinite;
+}
+.container:hover .eyes>span::after{
+  animation: eyes 8s infinite;
+}
+
+@keyframes tilt {
+  10%{ transform: rotateZ(-1deg);}
+  15%{ transform: rotateZ(0);}
+}
+
+@keyframes eyes {
+  10%{
+    border-top-width: 20px;
+    border-left-width: 10px;
+    border-bottom-width: 20px;
+    border-right-width: 20px;
+  }
+  15%{
+    border-top-width: 10px;
+    border-left-width: 7px;
+  }
+  25%, 30%{
+    border: 10px solid var(--dark);
+  }
+}
+
+@keyframes corner {
+  10%{
+    width: 25px;
+    height: 30px;
+    top: 25px;
+    right: 35px;
+  }
+  15%{
+    width: 38px;
+    height: 50px;
+    top: 15px;
+  }
+  25%, 40% {
+    width: 40px;
+    height: 52px;
+    top: 15px;
+    right: 25px;
+  }
+  
+}

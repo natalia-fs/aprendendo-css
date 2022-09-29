@@ -1,0 +1,119 @@
+.mask::after{
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #880a36;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.line{
+  position: absolute;
+  width: 3px;
+  height: 420px;
+  background: #14141455;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.line::before, .line::after{
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: -7px;
+  background: inherit;
+  transform: rotate(46deg);
+}
+
+.line::after{
+  transform: rotate(-46deg);
+}
+
+.web{
+  position: absolute;
+  width: 143px;
+  height: 225px;
+  background: #14141422;
+  left: 50%;
+  overflow: hidden;
+}
+
+.web-1{
+  transform: translate(0%, 120%) skewY(45deg);
+}
+.web-2{
+  transform: translate(0%, -40%) skewY(-45deg);
+}
+.web-3{
+  transform: translate(-100%, -40%) skewY(45deg);
+}
+.web-4{
+  transform: translate(-100%, 120%) skewY(-45deg);
+}
+.web-5{
+  width: 200px;
+  height: 200px;
+  transform: translate(-123%, 51%) rotate(-45deg);
+}
+
+.web-6{
+  width: 200px;
+  height: 200px;
+  transform: translate(22%, 52%) rotate(45deg);
+}
+
+.web-1>span,
+.web-2>span,
+.web-3>span,
+.web-4>span{
+  position: absolute;
+  width: 420px;
+  height: 400px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) skewY(-45deg);
+  background-image: repeating-radial-gradient(
+    circle,
+    #14141455 0px,
+    #14141455 5px,
+    transparent 5px,
+    transparent 80px
+  );
+}
+
+.web-5>span,
+.web-6>span{
+  position: absolute;
+  width: 450px;
+  height: 400px;
+  background-image: repeating-radial-gradient(
+    circle,
+    #14141455 0px,
+    #14141455 5px,
+    transparent 5px,
+    transparent 42px);
+}
+
+.web-1>span{
+  top: 65%;
+  transform: translate(-50%, -50%) skewY(-45deg);
+}
+.web-2>span{
+  transform: translate(-50%, -50%) skewY(45deg);
+}
+.web-4>span{
+  top: 65%;
+  transform: translate(-50%, -50%) skewY(45deg);
+
+}
+.web-5>span{
+  transform: translate(-40%, -37%);
+}
+.web-6>span{
+  transform: translate(-15%, -37%);
+}
