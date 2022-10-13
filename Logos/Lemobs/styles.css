@@ -1,0 +1,117 @@
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis */
+:root{
+  --orange: #f49e22;
+  --green: #1ab2b0;
+  --gray: #706f6d;
+}
+
+/* Corpo da página */
+body{
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container{
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: white;
+  border-radius: 50%;
+  transform: rotate(-5deg);
+}
+
+.hex{
+  position: relative;
+  width: 150px;
+  height: 75px;
+}
+
+.hex::before, .hex::after{
+content: "";
+position: absolute;
+width: 150px;
+height: 50px;
+border: 75px solid transparent;
+}
+
+.hex::before{
+  top: -124px;
+}
+
+.hex::after{
+  bottom: -124px;
+}
+
+.hex-1{
+  background: var(--orange);
+  top: 115px;
+  left: 9%;
+  transform: rotate(-65deg) scaleX(1.1);
+}
+
+.hex-1::before{
+  border-bottom: 50px solid var(--orange);
+}
+.hex-1::after{
+  border-top: 50px solid var(--orange);
+}
+
+.hex-2{
+  top: 23px;
+  right: -50%;
+  background: var(--green);
+  transform: rotate(53deg) scaleX(1.1);
+}
+.hex-2::before{
+  border-bottom: 50px solid var(--green);
+
+}
+.hex-2::after{
+  border-top: 50px solid var(--green);
+}
+
+.hex-3{
+  background: var(--gray);
+  top: 25.5%;
+  left: 33.5%;
+  transform: rotate(173deg) scaleX(1.1);
+}
+.hex-3::before{
+  border-bottom: 50px solid var(--gray);
+}
+.hex-3::after{
+  border-top: 50px solid var(--gray);
+}
+.hex>div{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  z-index: 4;
+  border: 15px solid white;
+  border-left: none;
+  border-bottom: none;
+  top: 0;
+  left: 50%;
+  transform: scaleX(1.35) rotate(-45deg)
+    translate(-57%, 4.5%);
+}
+
+.container:hover{
+  animation: 1s spin ease;
+}
+
+@keyframes spin {
+  0% { transform: rotate(-5deg);}
+  100% { transform: rotate(355deg);}
+}
