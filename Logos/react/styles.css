@@ -1,0 +1,48 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container:hover{
+  animation: spin 2s ease;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0);}
+  50% { transform: rotate(360deg);}
+}
+.ring{
+  width: 100px;
+  height: 200px;
+  border: 10px solid cyan;
+  border-radius: 50%;
+  position: absolute;
+}
+.ring-1{
+  transform: rotate(60deg);
+}
+.ring-2{
+  transform: rotate(-60deg);
+}
+.core{
+  background-color: cyan;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
