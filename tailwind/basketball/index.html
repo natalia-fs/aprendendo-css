@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Basketball</title>
+  <!-- Importando Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-slate-200 flex justify-center items-center h-screen overflow-hidden"
+>
+  <div
+    class="w-64 h-64 bg-orange-500 rounded-full flex justify-center items-center flex-col relative overflow-hidden"
+  >
+    <div class="w-52 h-52 border-8 border-orange-700 rounded-full absolute top-[60%]"></div>
+    <div class="w-52 h-52 border-8 border-orange-700 rounded-full absolute top-[-40%]"></div>
+    <div class="w-64 border-t-8 border-orange-700"></div>
+    <div class="h-64 border-r-8 border-orange-700 absolute"></div>
+    <div></div>
+  </div>
+</body>
+
+</html>
