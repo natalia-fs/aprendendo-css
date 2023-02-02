@@ -1,0 +1,53 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 380px;
+  height: 380px;
+  background: black;
+  border-radius: 50%;
+}
+
+.line{
+  position: absolute;
+  width: 25px;
+  height: 200px;
+  background: #e5e5e5;
+}
+
+.line:first-child{
+  left: 0;
+  margin-left: 25%;
+  z-index: 1;
+}
+
+.line:last-child{
+  background: linear-gradient(#e5e5e5 25%, black 77%);
+  z-index: -1;
+  right: 0;
+  margin-right: 25%;
+}
+
+.rotate{
+  z-index: 0;
+  height: 300px;
+  left: 50%;
+  background: linear-gradient(#e5e5e5 35%, black);
+  transform: translate(20%, 8%) rotate(-40deg);
+}
