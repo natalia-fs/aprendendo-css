@@ -1,0 +1,140 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: royalblue;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container:hover > .chamas{
+  filter:
+    drop-shadow(0 0 5px orangered)
+    drop-shadow(0 0 10px orange)
+    drop-shadow(0 0 15px goldenrod)
+    drop-shadow(0 -4px 20px gold)
+    drop-shadow(0 -8px 25px gold)
+  ;
+}
+.chamas{
+  position: relative;
+  width: 100%;
+  height: 170px;
+
+  transition: 3s filter;
+}
+
+.chama{
+  position: absolute;
+  width: 120px;
+  border-radius: 50%;
+  bottom: 0;
+}
+
+.chama-1{
+  background: orange;
+  aspect-ratio: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chama-2{
+  border-left: 60px solid orange;
+  height: 170px;
+  left: 28%;
+}
+
+.chama-3{
+  width: 50px;
+  height: 70px;
+  border-radius: 0;
+  top: 0;
+  left: 47%;
+
+  overflow: hidden;
+}
+
+.chama-3::before{
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  box-shadow: 0 0 15px 500px orange;
+  border-radius: 50%;
+  bottom: 0;
+}
+
+.chama-4{
+  height: 140px;
+  border-right: 25px solid orange;
+  left: 33%;
+  bottom: 2%;
+}
+
+.chama-4::before{
+  content: "";
+  position: absolute;
+  width: 75px;
+  aspect-ratio: 1;
+  background: gold;
+  border-radius: 0 50% 50% 50%;
+  left: 50%;
+  transform: translate(-40%, 70%) rotate(45deg);
+}
+
+.base{
+  width: 100%;
+  height: 100px;
+  position: relative;
+  z-index: -1;
+}
+
+.lenha{
+  position: absolute;
+  background: sienna;
+  width: 220px;
+  height: 30px;
+  outline: 2px solid #4a210e;
+  left: 50%;
+}
+
+.fundo{
+  transform: translateX(-50%) rotate(15deg);
+}
+.frente{
+  transform: translateX(-50%) rotate(-195deg);
+}
+
+.lenha::before, .lenha::after{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  outline: inherit;
+  border-radius: 50%;
+}
+
+.lenha::before{
+  left: -5%;
+  background: inherit;
+}
+.lenha::after{
+  background: sandybrown;
+  right: -5%;
+}
