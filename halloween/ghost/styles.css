@@ -1,0 +1,105 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.container{
+  width: 400px;
+  aspect-ratio: 2/3;
+
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ghost{
+  position: relative;
+  background: white;
+  width: 280px;
+  height: 60%;
+  border-radius: 50% 50% 0 0;
+
+  display: flex;
+  justify-content: center;
+  animation: 3s float infinite ease;
+}
+@keyframes float {
+  50% { transform: translateY(-30px);}
+}
+.face{
+  position: relative;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(55%);
+  gap: 1rem;
+}
+
+.eyes{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.eyes>div{
+  width: 50px;
+  height: 80px;
+  background-color: #444 ;
+  background-image: radial-gradient(at 35% 35%, white 20%, transparent 20%), radial-gradient(at 65% 45%, white 10%, transparent 10%);
+  border-radius: 50%;
+  border: 3px solid;
+}
+.smile{
+  background: pink;
+  width: 100px;
+  aspect-ratio: 1/3;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  border: 3px solid;
+  box-shadow: inset 0 10px 0 8px #444;
+}
+
+.ghost::before{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 130px;
+  background: white;
+  border-radius: 40px;
+  bottom: 0;
+  left: 0;
+  transform: translateY(55%);
+  box-shadow:
+    calc(40px * 1) 1rem navy,
+    calc(40px * 2) -1rem white,
+    calc(40px * 3) 2.5rem navy,
+    calc(40px * 4) 1rem white,
+    calc(40px * 5) 0rem navy,
+    calc(40px * 6) -1.5rem white
+  ;
+  animation: 4s move ease-in-out infinite;
+}
+
+@keyframes move {
+  50% {
+    box-shadow:
+      calc(40px * 1) 2rem navy,
+      calc(40px * 2) 1rem white,
+      calc(40px * 3) -.5rem navy,
+      calc(40px * 4) 0rem white,
+      calc(40px * 5) 1.5rem navy,
+      calc(40px * 6) -.5rem white
+    ;
+  }
+}
