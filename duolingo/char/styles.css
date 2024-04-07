@@ -1,0 +1,101 @@
+body {
+  background: #222;
+}
+
+.container{
+  position: absolute;
+  width: 60vmin;
+  height: 70vmin;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.head{
+  --width: 50vmin;
+  position: absolute;
+  background: sienna;
+  width: var(--width);
+  height: 55vmin;
+  left: 50%;
+  transform:
+    translateX(-50%)
+    perspective(1px)
+    rotateX(0.03deg)
+  ;
+  border-radius: 25% 25% 0 0;
+}
+
+.neck{
+  position: relative;
+  width: 54vmin;
+  height: 10vmin;
+  background: aqua;
+  top: 100%;
+  left: 50%;
+  transform: translatex(-50%);
+  border-radius: 1vmin;
+}
+
+.ears{
+  position: absolute;
+  width: 94%;
+
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ears>div{
+  width: 5vmin;
+  height: 6vmin;
+  background: sienna;
+  border-radius: 6vmin;
+  transform: rotate(-45deg);
+}
+.ears>div:last-child{
+  transform: rotate(45deg);
+}
+
+.eyes{
+  position: absolute;
+  width: 25vmin;
+  height: 5vmin;
+  left: 50%;
+  transform: translate(-50%, 325%);
+
+  display: flex;
+  gap: 2vmin;
+}
+.eyes>div{
+  width: 50%;
+  background:
+    radial-gradient(circle at 60% 0%, #000 25%, #0000 27%)
+    #fff
+  ;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+.eyes>div:last-child{
+  transform: scaleX(-1);
+}
+
+.nose{
+  position: absolute;
+  width: 12vmin;
+  aspect-ratio: 1/2;
+  border-radius: 12vmin;
+  background: sandybrown;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.nose>div{
+  background: #222;
+  width: 5vmin;
+  height: 4vmin;
+  border-radius: 5vmin;
+}
