@@ -64,7 +64,7 @@ body{
 .smile{
   background: pink;
   width: 100px;
-  aspect-ratio: 1/3;
+  height: 33px;
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
   border: 3px solid;
   box-shadow: inset 0 10px 0 8px #444;
