@@ -1,0 +1,49 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70vmin;
+  aspect-ratio: 1;
+  background: linear-gradient(180deg, #1285fe 0, #0065cf);
+  border-radius: 25%;
+}
+
+.top, .bottom{
+  display: flex;
+  justify-content: center;
+}
+
+.top>div{
+  background: #fff;
+  width: 24vmin;
+  height: 24vmin;
+  border-radius: 15% 90% 0 25%/15% 100% 0 50%;
+  transform: skewY(15deg) rotateZ(-10deg);
+}
+
+.top>div:last-child{
+  transform: skewY(-15deg) rotateZ(10deg) rotateY(180deg);
+}
+
+.bottom>div{
+  background: #fff;
+  width: 16vmin;
+  aspect-ratio: 1;
+  border-radius: 80% 0 50% 80% / 50% 0 80% 80%;
+}
+.bottom>div:last-child{
+  transform: rotateY(180deg);
+}
