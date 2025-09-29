@@ -1,0 +1,166 @@
+:root {
+  --bg: gold;
+  --flower: #F92A67;
+  --primary: limegreen;
+  --secondary: seagreen;
+  --outline-color: black;
+  --flower-size: 20vmin;
+  --container-size: 90vmin;
+}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  height: 100dvh;
+  background: var(--bg);
+}
+.container{
+  position: relative;
+  width: var(--container-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.flower{
+  position: relative;
+  width: 45vmin;
+  height: 20vmin;
+  overflow: hidden;
+  filter: drop-shadow(0 -.75vmin 0 var(--outline-color));
+  border-bottom: 2vmin solid var(--outline-color);
+}
+.flower > div{
+  position: absolute;
+  background: var(--flower);
+  top: 15%;
+}
+.flower .left, .flower .right{
+  width: 20vmin;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: 0 20%;
+  box-shadow:
+    -1vmin 0 var(--outline-color),
+    -1.75vmin -.75vmin var(--outline-color)
+  ;
+}
+.flower .left{
+  left: 5%;
+  z-index: 2;
+}
+.flower .right{
+  right: 5%;
+  box-shadow:
+    1.75vmin 0 var(--outline-color),
+    1.75vmin -.75vmin var(--outline-color)
+  ;
+}
+
+.flower .center{
+  width: 20vmin;
+  height: 40vmin;
+  left: 50%;
+  translate: -50% -2.5%;
+  border-radius: 20vmin;
+  box-shadow: 0 -1.5vmin var(--outline-color);
+}
+
+.spike{
+  width: 70vmin;
+  aspect-ratio: 1.15;
+  border-radius: 12vmin;
+  box-shadow: 0 1vmin 0 4vmin var(--outline-color);
+  --start: 15%;
+  --light: 33.5%;
+  --dark: 3%;
+  background: repeating-linear-gradient(
+    to right,
+    var(--primary) var(--start),
+    var(--primary) calc(var(--start) + var(--light)),
+    var(--secondary) calc(var(--start) + var(--light)),
+    var(--secondary) calc(var(--start) + var(--light) + var(--dark))
+  );
+}
+.face{
+  position: absolute;
+  width: inherit;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vmin;
+  translate: 0 5vmin;
+}
+.eyes{
+  position: relative;
+  width: 45vmin;
+  display: flex;
+  justify-content: space-between;
+}
+.eyes>div{
+  width: 18vmin;
+  aspect-ratio: 1;
+  background: var(--outline-color);
+  border-radius: 50%;
+}
+.smile{
+  position: relative;
+  width: 30vmin;
+  aspect-ratio: 2;
+  display: flex;
+  justify-content: center;
+  padding: 2.5%;
+}
+.smile::before{
+  content: "";
+  position: absolute;
+  width: 25%;
+  aspect-ratio: 1;
+  background: var(--outline-color);
+  translate: 0 50%;
+}
+.smile div{
+  position: relative;
+  background: var(--outline-color);
+}
+.smile .center{
+  position: absolute;
+  width: 87.5%;
+  height: 60%;
+  border-radius: 50% / 0 0 100% 100%;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 15%;
+}
+.smile .center div{
+  position: absolute;
+  width: 30%;
+  height: 80%;
+  background: transparent;
+  left: 50%;
+  translate: -50% -81%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.smile .center div::before{
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 50%;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 0 50px var(--outline-color);
+  translate: 0 -55%;
+}
+.smile .left, .smile .right{
+  width: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
