@@ -1,0 +1,141 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --bg: darkslateblue;
+  --face: skyblue;
+  --face-hover: #fff;
+}
+body{
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+.container{
+  width: 90vmin;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container:hover .face .eyes{
+  filter: 
+    drop-shadow(0 .5vmin 3px magenta)
+    drop-shadow(0 0 4px blueviolet)
+    drop-shadow(.5vmin 0 1vmin purple)
+    drop-shadow(-.5vmin 0 5vmin slateblue)
+    drop-shadow(0 0 7vmin magenta)
+    drop-shadow(0 1vmin 10vmin hotpink)
+  ;
+}
+.container:hover .face .eyes>.eye,
+.container:hover .face .mouth::before,
+.container:hover .face .mouth::after {
+  background: var(--face-hover);
+}
+.container:hover .face .eyebrows>div{
+  background: var(--face-hover);
+  width: 30%;
+}
+
+
+._8bit{
+  position: relative;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 20%;
+  background: #C3C3FA;
+  box-shadow: 0 1.5vmin 0 4vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+._8bit::before{
+  content: "";
+  position: absolute;
+  width: 45%;
+  aspect-ratio: 2.5;
+  border: 2vmin solid;
+  border-top: none;
+  border-radius: 0 0 7.5vmin 7.5vmin;
+  top: 0;
+}
+.face{
+  background: #251F68;
+  width: 100%;
+  height: 55%;
+  border-top: 2vmin solid;
+  border-bottom: 2vmin solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.eyes{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+.eye{
+  position: relative;
+  height: 75%;
+  aspect-ratio: 1;
+  background: var(--face);
+  border-radius: 50%;
+}
+.eyebrows{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  z-index: 2;
+}
+
+.eyebrows>div{
+  position: relative;
+  width: 0%;
+  aspect-ratio: 3;
+  background: var(--face);
+  border-radius: 20vmin;
+  transform: rotate(30deg);
+  translate: 0 -120%;
+}
+.eyebrows .right{
+  transform: rotate(-30deg);
+}
+
+.mouth{
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  translate: 0 60%;
+}
+.mouth::before, .mouth::after{
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 18%;
+  z-index: 2;
+  background: var(--face);
+  z-index: 2;
+  border-radius: 0 20vmin 20vmin 0;
+  transform: rotate(45deg);
+  translate: 22%;
+}
+
+.mouth::after{
+  transform: rotate(-45deg) rotateY(180deg);
+  translate: -22.5%;
+}
