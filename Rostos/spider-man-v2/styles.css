@@ -1,0 +1,349 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --background: dodgerblue;
+  --main-color: #9A083B;
+  --secondary-color: #52041F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.mask {
+  position: relative;
+  background: var(--main-color);
+  width: 56vmin;
+  height: 80vmin;
+  border-radius: 50%/ 30% 30% 60% 60%;
+  box-shadow: 0 0 1.5vmin 0.5vmin;
+  overflow: hidden;
+  transition: box-shadow .5s ease, transform 1s ease;
+}
+
+.eyes {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  gap: 5vmin;
+  width: 100%;
+  top: 40%;
+  z-index: 9;
+}
+
+.edge {
+  position: relative;
+  background: black;
+  width: 48%;
+  aspect-ratio: 2;
+  border-radius: 5% 5% 50% 50%/5% 5% 100% 100%;
+  transform: rotate(40deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:last-child {
+    transform: rotate(-40deg);
+
+    &::after {
+      border-radius: 100% 0 0 0;
+    }
+    & .inner {
+      transform: scaleY(.85) rotateZ(3deg) translate(-5%,4%);
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3.5vmin;
+
+    background: black;
+    border-radius: 0 100% 0 0;
+    corner-shape: scoop;
+    transform: translate(0%, -215%);
+  }
+}
+
+.inner {
+  position: absolute;
+  background: white;
+  width: 80%;
+  aspect-ratio: 2;
+  border-radius: 2% 2% 50% 50% / 5% 5% 100% 100%;
+  transform: scaleY(.85) rotateZ(-3deg) translate(5%,4%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5vmin;
+    top: -1.2vmin;
+    border-radius: 50% / 100% 100% 0 0;
+    background: inherit;
+  }
+}
+
+.web {
+  display: flex;
+  justify-content: center;
+
+  .top {
+    position: absolute;
+    border: 1vmin solid var(--secondary-color);
+    width: 100%;
+    height: 50%;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    border-top: none;
+    border-bottom: .25vmin solid transparent;
+    top: -1%;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1vmin;
+      height: 110%;
+      background: var(--secondary-color);
+      left: 50%;
+      transform: translate(-50%);
+      border-radius: 0 0 50% 50%;
+      corner-shape: scoop;
+      z-index: 3;
+    }
+    .mid {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      border: inherit;
+      border-radius: inherit;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+
+      &::before, &::after {
+        content: "";
+        position: relative;
+        display: block;
+        width: 50%;
+        height: 100%;
+        background:
+          repeating-radial-gradient(
+            ellipse 35% 12% at 20% -8%,
+            var(--secondary-color) 0vmin 1vmin,
+            var(--main-color) 1vmin 12vmin
+          );
+      }
+
+      &::after {
+        transform: rotateY(180deg);
+      }
+    }
+
+    .part {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      overflow: hidden;
+      left: 50%;
+      transform: translate(-50%);
+
+      &::before, &::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 50%;
+        height: 100%;
+        background:
+          radial-gradient(
+            circle at 4% 10%,
+            var(--main-color) 0vmin 14vmin,
+            var(--secondary-color) 14vmin 15vmin,
+            transparent 15vmin 15vmin
+          ),
+          radial-gradient(
+            circle at 23% 45%,
+            transparent 0vmin 11vmin,
+            var(--secondary-color) 11vmin 12vmin,
+            transparent 12vmin 12vmin
+          ),
+          radial-gradient(
+            ellipse 145% 170% at 23% 68%,
+            transparent 0vmin 15vmin,
+            var(--secondary-color) 15vmin 16vmin,
+            transparent 16vmin 16vmin
+          )
+        ;
+      }
+      &::after {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+
+.bottom {
+  position: absolute;
+  width: 76%;
+  height: 47.5%;
+  bottom: -1.5%;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  border: 1vmin solid var(--secondary-color);
+  border-bottom: none;
+  border-top: .25vmin solid transparent;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+
+  .mid, .part {
+    position: absolute;
+    height: 100%;
+    border-radius: inherit;
+  }
+
+  .mid {
+    width: 40%;
+    display: flex;
+    border-left: 1vmin solid var(--secondary-color);
+    border-right: 1vmin solid var(--secondary-color);
+    background:
+      repeating-radial-gradient(
+        ellipse 40% 20% at center 100%,
+        var(--secondary-color) 0vmin 1vmin,
+        var(--main-color) 1vmin 8vmin
+    );
+    z-index: 2;
+  }
+  .part {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    z-index: -1;
+    &::before, &::after {
+      content: "";
+      display: block;
+      position: relative;
+      width: 60%;
+      height: 100%;
+      background:
+        radial-gradient(
+          ellipse 100% 30% at 50% 87.5%,
+          var(--main-color) 0vmin 6vmin,
+          var(--secondary-color) 6vmin 7vmin,
+          transparent 7vmin 7vmin
+        ),
+        radial-gradient(
+          ellipse 110% 50% at 50% 60%,
+          var(--main-color) 0vmin 9vmin,
+          var(--secondary-color) 9vmin 10vmin,
+          transparent 10vmin 10vmin
+        ),
+        radial-gradient(
+          circle at center 55%,
+          var(--main-color) 6vmin 14vmin,
+          var(--secondary-color) 14vmin 15vmin,
+          var(--main-color) 15vmin 15vmin
+        )
+      ;
+    }
+  }
+}
+
+.side {
+  position: absolute;
+  width: 40%;
+  height: 55%;
+  left: 0;
+  bottom: 50%;
+  transform: translate(0, 50%);
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  &.right {
+    right: 0;
+    transform: translate(0, 50%) rotateY(180deg);
+    left: auto;
+  }
+  .mid, .part {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+  .mid {
+    height: 40%;
+    left: 0;
+    bottom: 50%;
+    display: flex;
+    transform: translate(-10%, 50%);
+    border-top: 1vmin solid var(--secondary-color);
+    border-bottom: 1vmin solid var(--secondary-color);
+    background:
+      radial-gradient(
+        circle at 10% 50%,
+        transparent 6vmin 14vmin,
+        var(--secondary-color) 14vmin 15vmin,
+        transparent 15vmin 15vmin
+      ),
+      radial-gradient(
+        ellipse 30% 60% at -15% center,
+        var(--main-color) 0vmin 9vmin,
+        var(--secondary-color) 9vmin 10vmin,
+        var(--main-color) 10vmin 10vmin
+      );
+      z-index: 2;
+  }
+
+  .part {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    z-index: -1;
+    &::before, &::after {
+      content: "";
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 40%;
+      background:
+        radial-gradient(
+          circle at -43% 32%,
+          transparent 6vmin 14vmin,
+          var(--secondary-color) 14vmin 15vmin,
+          transparent 15vmin 15vmin
+        );
+    }
+    &::after {
+      transform: rotateX(180deg);
+      background:
+        radial-gradient(
+          circle at -16% 10%,
+          transparent 6vmin 14vmin,
+          var(--secondary-color) 14vmin 15vmin,
+          transparent 15vmin 15vmin
+        ),
+        radial-gradient(
+          circle at 40% 50%,
+          transparent 6vmin 9vmin,
+          var(--secondary-color) 9vmin 10vmin,
+          transparent 10vmin 10vmin
+        )
+      ;
+    }
+  }
+}

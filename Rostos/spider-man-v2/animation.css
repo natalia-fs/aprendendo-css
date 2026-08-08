@@ -1,0 +1,24 @@
+body:hover {
+  
+  .inner {
+    animation: eyes_animation 2s ease-in;
+  }
+
+  &:has(.mask:hover){
+    --background: #44b;
+    --main-color: #222;
+    --secondary-color: #333;
+    .mask {
+      box-shadow: 0 0 20px 5px #FFF5;
+      transform: rotate(4deg);
+
+      .edge {
+        filter: drop-shadow(0 0 .5vmin var(--secondary-color));
+      }
+    }
+  }
+}
+
+@keyframes eyes_animation {
+  50% { scale: 100% 0.85}
+}
